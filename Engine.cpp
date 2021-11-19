@@ -10,18 +10,22 @@ void Engine::operation() {
 }
 
 Engine* Engine::clone() {
-	throw "Not yet implemented";
+	return new Engine(*this);
 }
 
 void Engine::setType(string aType) {
-	throw "Not yet implemented";
+	this->_engineType = aType;
+}
+
+Engine::Engine(const Engine& eng) {
+	this->_engineType = eng._engineType;
 }
 
 void Engine::add(Propulsion* aP) {
-	throw "Not yet implemented";
+	// DO NOTHING
 }
 
 void Engine::remove(Propulsion* aP) {
-	throw "Not yet implemented";
+	// DO NOTHING
 }
 

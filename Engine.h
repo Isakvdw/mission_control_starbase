@@ -18,6 +18,8 @@ class Engine: public Propulsion
 
 	public: Engine* clone();
 
+	public: Engine(const Engine& eng); // Copy constructor added
+
 	public: void setType(string aType);
 
 	public: virtual void add(Propulsion* aP);
