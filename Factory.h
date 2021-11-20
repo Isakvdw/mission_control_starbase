@@ -11,7 +11,6 @@ class Factory;
 
 class Factory
 {
-
 	public: virtual SatelliteLauncher* createComponent() = 0;
 };
 

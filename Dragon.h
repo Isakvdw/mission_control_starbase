@@ -12,6 +12,7 @@ class Dragon;
 
 class Dragon: public Payload
 {
+	Dragon(const Dragon& obj);
 
 	public: string getPayloadDescription();
 

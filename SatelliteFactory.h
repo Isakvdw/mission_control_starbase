@@ -13,7 +13,7 @@ class SatelliteFactory;
 
 class SatelliteFactory: public Factory
 {
-
+	SatelliteLauncher(const SatelliteLauncher& obj);
 	public: SatelliteLauncher* createComponent();
 };
 

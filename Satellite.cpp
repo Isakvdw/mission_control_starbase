@@ -4,7 +4,9 @@ using namespace std;
 #include "Satellite.h"
 #include "SatelliteLauncher.h"
 
+Satellite::Satellite(const Satellite& obj) {}
+
 Satellite* Satellite::clone() {
-	throw "Not yet implemented";
+	return new Satellite(this*);
 }
 

@@ -12,10 +12,15 @@ class DragonCrew;
 
 class DragonCrew: public Payload
 {
-
-	public: string getPayloadDescription();
-
-	public: void printPayload();
+	private:
+		string crew[7] = {"","","","","","",""};
+		const int CREWCAP = 7;
+	public: 
+		DragonCrew(const DragonCrew& obj);
+		void insertCrew(string Name, string Rank);
+		string getPayloadDescription();
+	public: 
+		void printPayload();
 };
 
 #endif
