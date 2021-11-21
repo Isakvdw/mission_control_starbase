@@ -24,7 +24,7 @@ void DragonCrew::insertCrew(string Name, string Rank) {
 	{
 		if (crew[x] == "")
 		{
-			crew[x] = Name + ":" + Rank;
+			crew[x] = Name + " : " + Rank;
 			cout<<crew[x]<<", added to launch successfully!"<<endl;
 			return;
 		}
@@ -35,7 +35,7 @@ void DragonCrew::insertCrew(string Name, string Rank) {
 
 string DragonCrew::getPayloadDescription() {
 	bool b = false;
-	string out = "Crew members:\n";
+	string out = "Crew members : \n";
 	for(int x = 0; x < 7; x++)
 	{
 		if (crew[x] != "")
