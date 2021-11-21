@@ -1,5 +1,6 @@
 #include <exception>
 #include <string>
+#include <iostream>
 using namespace std;
 
 #include "DragonCrew.h"
@@ -29,7 +30,7 @@ void DragonCrew::insertCrew(string Name, string Rank) {
 
 string DragonCrew::getPayloadDescription() {
 	bool b = false;
-	strint out = "Crew members:\n";
+	string out = "Crew members:\n";
 	for(int x = 0; x < 7; x++)
 	{
 		if (crew[x] != "")
