@@ -1,8 +1,8 @@
-main: main.o
-		g++ -static main.o -o main
+test: test.o
+		g++ -static test.o -o test
 
-main.o: *.cpp *.h
-		g++ main.cpp -c
+test.o: *.cpp *.h
+		g++ test.cpp -c
 
 run:
-		./main
+		./test
