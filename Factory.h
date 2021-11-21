@@ -9,7 +9,7 @@ using namespace std;
 class SatelliteLauncher;
 class Factory;
 
-class Factory
+class Factory 
 {
 	public: 
 		virtual SatelliteLauncher* createComponent() = 0;
