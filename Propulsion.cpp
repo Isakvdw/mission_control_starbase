@@ -20,14 +20,18 @@ void Propulsion::operation() {
 }
 
 void Propulsion::attach(Observer* aO) {
-	throw "Not yet implemented";
+	_observerList.push_back(aO);
 }
 
 void Propulsion::detach(Observer* aO) {
-	throw "Not yet implemented";
+	for(auto it = _observerList.begin(); it < _observerList.end(); it++) {
+		if (*it == aO) _observerList.erase(it);
+	}
 }
 
 void Propulsion::notify() {
-	throw "Not yet implemented";
+	for (auto observer : _observerList) {
+		observer->update();
+	}
 }
 

@@ -17,9 +17,6 @@ class Propulsion;
 class Propulsion
 {
 	private: vector<Observer*> _observerList;
-	public: Rocket* _unnamed_Rocket_;
-	public: Booster* _unnamed_Booster_;
-	public: Observer* _unnamed_Observer_;
 
 	public: virtual void add(Propulsion* aP) = 0;
 
@@ -27,10 +24,22 @@ class Propulsion
 
 	public: virtual void operation() = 0;
 
+	/**
+	 * Adds an observer to the observer list
+	 * @param[in] aO A pointer to the observer to be added to the observer list 
+	 * @note Observer also has to register with respective object to function correctly
+	 */
 	public: void attach(Observer* aO);
 
+	/**
+	 * @brief Removes an observer from the observer list
+	 * @param aO The observer to be removed from the observer list 
+	 */
 	public: void detach(Observer* aO);
 
+	/**
+	 * Notifies all observers in the observer list
+	 */
 	public: void notify();
 };
 
