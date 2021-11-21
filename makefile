@@ -1,13 +1,13 @@
-test:*.o
-	g++ -g -o test *.o
+main:*.o
+	g++ -g -o main *.o
 *.o:*.cpp
 	g++ -c -g *.cpp
 run:
-	./test
+	./main
 clean:
-	rm *.o test
+	rm *.o main
 leakcheck:
-	valgrind --leak-check=yes ./test
+	valgrind --leak-check=yes ./main
 gdb:
 	gdb test
 tar:
