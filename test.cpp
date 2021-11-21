@@ -1,7 +1,5 @@
 #include <iostream>
 #include "Dragon.h"
-#include "DragonCrew.h"
-#include "Satellite.h"
 using namespace std;
 int main() {
     Payload * test = new Dragon();
