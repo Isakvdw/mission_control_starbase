@@ -13,8 +13,9 @@ class SatelliteFactory;
 
 class SatelliteFactory: public Factory
 {
-	SatelliteLauncher(const SatelliteLauncher& obj);
-	public: SatelliteLauncher* createComponent();
+	public: 
+		SatelliteFactory(const SatelliteFactory& obj);
+		SatelliteLauncher* createComponent();
 };
 
 #endif

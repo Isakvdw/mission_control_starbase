@@ -7,6 +7,6 @@ using namespace std;
 Satellite::Satellite(const Satellite& obj) {}
 
 Satellite* Satellite::clone() {
-	return new Satellite(this*);
+	return new Satellite(*this);
 }
 
