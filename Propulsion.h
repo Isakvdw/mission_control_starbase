@@ -17,9 +17,9 @@ class Propulsion;
 class Propulsion
 {
 	private: vector<Observer*> _observerList;
-	public: Rocket* _unnamed_Rocket_;
-	public: Booster* _unnamed_Booster_;
-	public: Observer* _unnamed_Observer_;
+	// public: Rocket* _unnamed_Rocket_;
+	// public: Booster* _unnamed_Booster_;
+	// public: Observer* _unnamed_Observer_;
 
 	public: virtual void add(Propulsion* aP) = 0;
 

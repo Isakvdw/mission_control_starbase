@@ -1,9 +1,14 @@
 #include <exception>
+#include <iostream>
 #include <string>
 using namespace std;
 
 #include "DragonCrew.h"
 #include "Payload.h"
+
+DragonCrew::DragonCrew() {
+	this->_payloadDescription = "Cargo and Crew to be transported to the ISS.";
+}
 
 DragonCrew::DragonCrew(const DragonCrew& obj) {
 	for (int x = 0; x < 7; x++)
@@ -29,7 +34,7 @@ void DragonCrew::insertCrew(string Name, string Rank) {
 
 string DragonCrew::getPayloadDescription() {
 	bool b = false;
-	strint out = "Crew members:\n";
+	string out = "Crew members:\n";
 	for(int x = 0; x < 7; x++)
 	{
 		if (crew[x] != "")

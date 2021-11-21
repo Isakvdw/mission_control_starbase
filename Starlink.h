@@ -5,12 +5,12 @@ using namespace std;
 #ifndef __Starlink_h__
 #define __Starlink_h__
 
-// #include "SatelliteLauncher.h"
+#include "SatelliteLauncher.h"
 #include "Payload.h"
 
-class SatelliteLauncher;
+// class SatelliteLauncher;
 // class Payload;
-class Starlink;
+// class Starlink;
 
 class Starlink: public Payload
 {

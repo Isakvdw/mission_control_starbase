@@ -14,8 +14,8 @@ class SatelliteLauncher
 	private: 
 		SatelliteLauncher* _successor;
 	public: 
-		Starlink* _unnamed_Starlink_;
-		SatelliteLauncher* _unnamed_SatelliteLauncher_;
+		// Starlink* _unnamed_Starlink_;
+		// SatelliteLauncher* _unnamed_SatelliteLauncher_;
 		void handleRequest();
 		void add(SatelliteLauncher* satellite);
 		int count();
