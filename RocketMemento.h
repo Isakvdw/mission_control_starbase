@@ -1,6 +1,9 @@
 
 #ifndef __RocketMemento_h__
 #define __RocketMemento_h__
+#include <string>
+#include <iostream>
+
 
 // #include "Caretaker.h"
 // #include "Aggregate.h"
