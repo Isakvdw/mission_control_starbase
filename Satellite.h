@@ -4,7 +4,7 @@ using namespace std;
 #ifndef __Satellite_h__
 #define __Satellite_h__
 
-#include "SatelliteLauncher.h"
+#include "SatelliteLauncher.h" 
 
 // class SatelliteLauncher;
 class Satellite;

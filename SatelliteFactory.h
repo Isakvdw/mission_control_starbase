@@ -9,7 +9,7 @@ using namespace std;
 
 class SatelliteLauncher;
 // class Factory;
-class SatelliteFactory;
+class SatelliteFactory; 
 
 class SatelliteFactory: public Factory
 {

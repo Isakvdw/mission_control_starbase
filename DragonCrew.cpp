@@ -8,7 +8,7 @@ using namespace std;
 #include "Payload.h"
 
 DragonCrew::DragonCrew() {
-	this->_payloadDescription = "Cargo and Crew to be transported to the ISS.";
+	this->_payloadDescription = "Cargo and Crew to be transported to the ISS!";
 }
 
 DragonCrew::DragonCrew(const DragonCrew& obj) {

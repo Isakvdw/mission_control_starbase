@@ -5,7 +5,7 @@ using namespace std;
 #include "Starlink.h"
 
 void SatelliteLauncher::handleRequest() {
-	throw "Not yet implemented";
+	throw "Not yet implemented"; 
 }
 
 void SatelliteLauncher::add(SatelliteLauncher* satellite) {

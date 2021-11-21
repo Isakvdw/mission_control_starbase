@@ -15,7 +15,7 @@ using namespace std;
 class Starlink: public Payload
 {
 	private: 
-		SatelliteLauncher* _satellites;
+		SatelliteLauncher* _satellites; 
 	public: 
 		SatelliteLauncher* _unnamed_SatelliteLauncher_;
 		string getPayloadDescription();

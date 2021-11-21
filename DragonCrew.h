@@ -16,8 +16,8 @@ class DragonCrew: public Payload
 		string crew[7] = {"","","","","","",""};
 		const int CREWCAP = 7;
 	public: 
-		DragonCrew();
 		DragonCrew(const DragonCrew& obj);
+		DragonCrew();
 		void insertCrew(string Name, string Rank);
 		string getPayloadDescription();
 	public: 
