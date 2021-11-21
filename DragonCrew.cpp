@@ -6,6 +6,10 @@ using namespace std;
 #include "DragonCrew.h"
 #include "Payload.h"
 
+DragonCrew::DragonCrew() {
+	this->_payloadDescription = "";
+}
+
 DragonCrew::DragonCrew(const DragonCrew& obj) {
 	for (int x = 0; x < 7; x++)
 	{
