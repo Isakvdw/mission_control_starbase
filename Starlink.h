@@ -14,12 +14,12 @@ class Starlink;
 
 class Starlink: public Payload
 {
-	private: SatelliteLauncher* _satellites;
-	public: SatelliteLauncher* _unnamed_SatelliteLauncher_;
-
-	public: string getPayloadDescription();
-
-	public: void printPayload();
+	private: 
+		SatelliteLauncher* _satellites;
+	public: 
+		SatelliteLauncher* _unnamed_SatelliteLauncher_;
+		string getPayloadDescription();
+		void printPayload();
 };
 
 #endif

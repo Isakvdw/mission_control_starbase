@@ -8,3 +8,16 @@ void SatelliteLauncher::handleRequest() {
 	throw "Not yet implemented";
 }
 
+void SatelliteLauncher::add(SatelliteLauncher* satellite) {
+	if (this->_successor != null){
+		this->_successor->add(satellite);
+	}
+	this->_successor = satellite;
+}
+
+int SatelliteLauncher::count() {
+	if (this->_successor == null) {
+		return 1;
+	}
+	return 1 + this->_successor->count();
+}

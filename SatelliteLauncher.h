@@ -11,11 +11,14 @@ class SatelliteLauncher;
 
 class SatelliteLauncher
 {
-	private: SatelliteLauncher* _successor;
-	public: Starlink* _unnamed_Starlink_;
-	public: SatelliteLauncher* _unnamed_SatelliteLauncher_;
-
-	public: void handleRequest();
+	private: 
+		SatelliteLauncher* _successor;
+	public: 
+		Starlink* _unnamed_Starlink_;
+		SatelliteLauncher* _unnamed_SatelliteLauncher_;
+		void handleRequest();
+		void add(SatelliteLauncher* satellite);
+		int count();
 };
 
 #endif

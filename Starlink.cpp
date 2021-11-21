@@ -1,5 +1,6 @@
 #include <exception>
 #include <string>
+#include <iostream>
 using namespace std;
 
 #include "Starlink.h"
@@ -7,10 +8,11 @@ using namespace std;
 #include "Payload.h"
 
 string Starlink::getPayloadDescription() {
-	throw "Not yet implemented";
+	string out = "Number of Satellites: "+to_string(_satellites->count());
+	return out;
 }
 
 void Starlink::printPayload() {
-	throw "Not yet implemented";
+	cout<<getPayloadDescription()<<endl;
 }
 

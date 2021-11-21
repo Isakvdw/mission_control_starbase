@@ -5,7 +5,9 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Factory.h"
 
+SatelliteLauncher::SatelliteLauncher(const SatelliteLauncher& obj) {}
+
 SatelliteLauncher* SatelliteFactory::createComponent() {
-	throw "Not yet implemented";
+	return new SatelliteLauncher();
 }
 
