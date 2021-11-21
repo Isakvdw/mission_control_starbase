@@ -34,6 +34,7 @@ class FuelObserver: public Observer
 	/**
 	 * Sets the booster that will be observed
 	 * @param[in] aBooster Pointer to the booster being observed
+	 * @note method could be moved to parent class, in which case @p _concreteBooster could also be moved to parent Class
 	 */
 	public: void setSubjectBooster(Booster* aBooster);
 
