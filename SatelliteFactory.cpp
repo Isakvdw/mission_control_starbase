@@ -5,7 +5,9 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Factory.h"
 
-SatelliteLauncher::SatelliteLauncher(const SatelliteLauncher& obj) {}
+SatelliteFactory::SatelliteFactory(const SatelliteFactory& obj) {
+
+}
 
 SatelliteLauncher* SatelliteFactory::createComponent() {
 	return new SatelliteLauncher();

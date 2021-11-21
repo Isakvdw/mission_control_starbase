@@ -12,11 +12,12 @@ class Dragon;
 
 class Dragon: public Payload
 {
-	Dragon(const Dragon& obj);
-
-	public: string getPayloadDescription();
-
-	public: void printPayload();
+	public:
+		Dragon();
+		Dragon(const Dragon& obj);
+		string getPayloadDescription();
+	public: 
+		void printPayload();
 };
 
 #endif
