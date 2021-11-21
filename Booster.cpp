@@ -6,11 +6,16 @@ using namespace std;
 #include "Propulsion.h"
 
 void Booster::add(Propulsion* aP) {
-	throw "Not yet implemented";
+	_children.push_back(aP);
 }
 
 void Booster::remove(Propulsion* aP) {
-	throw "Not yet implemented";
+	for (auto it = _children.begin(); it < _children.end(); it++) {
+		if (*it == aP) {
+			_children.erase(it);
+			return;
+		}
+	}
 }
 
 int Booster::getLOXfuelLevel() {

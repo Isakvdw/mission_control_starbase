@@ -15,7 +15,6 @@ class Booster: public Propulsion
 	private: vector<Propulsion*> _children;
 	private: int _lOXfuelLevel;
 	private: int _rP1fuelLevel;
-	public: Propulsion* _unnamed_Propulsion_;
 
 	public: void add(Propulsion* aP);
 
