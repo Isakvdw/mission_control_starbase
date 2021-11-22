@@ -7,7 +7,14 @@
 
 using namespace std;
 
+void observer_test();
+
 int main() {
+    observer_test();
+    return 0;
+}
+
+void observer_test() {
     cout << "================OBSERVER TEST================" << endl;
     Booster *fHeavy = new FalconHeavy();
     Booster *f = new Falcon();
@@ -50,7 +57,7 @@ int main() {
     f->notify();
     sStage->notify();
 
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 12; i++) {
         fHeavy->setLOXfuelLevel(fHeavy->getLOXfuelLevel() - 5);
         fHeavy->setRP1fuelLevel(fHeavy->getRP1fuelLevel() - 11);
         fHeavy->notify();
@@ -75,5 +82,4 @@ int main() {
     delete fHeavy;
 
     cout << "==============OBSERVER TEST DONE==============" << endl;
-    return 0;
 }
