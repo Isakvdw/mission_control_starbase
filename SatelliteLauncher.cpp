@@ -4,6 +4,10 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Starlink.h"
 
+SatelliteLauncher::SatelliteLauncher() {
+	this->_successor = NULL;
+}
+
 void SatelliteLauncher::handleRequest() {
 	throw "Not yet implemented"; 
 }

@@ -5,6 +5,10 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Factory.h" 
 
+SatelliteFactory::SatelliteFactory() {
+	
+}
+
 SatelliteFactory::SatelliteFactory(const SatelliteFactory& obj) {
 
 }

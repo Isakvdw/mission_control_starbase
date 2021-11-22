@@ -12,6 +12,7 @@ class Satellite;
 class Satellite: public SatelliteLauncher
 {
 	public: 
+		Satellite();
 		Satellite(const Satellite& obj);
 		Satellite* clone();
 };

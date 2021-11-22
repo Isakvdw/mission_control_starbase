@@ -8,6 +8,10 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Payload.h" 
 
+Starlink::Starlink() {
+	this->_satellites = NULL;
+}
+
 string Starlink::getPayloadDescription() {
 	string out = "Number of Satellites: "+to_string(_satellites->count());
 	return out;
