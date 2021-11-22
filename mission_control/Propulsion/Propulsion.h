@@ -47,6 +47,36 @@ class Propulsion
 	 * Notifies all observers in the observer list
 	 */
 	public: void notify();
+
+	/**
+	 * @brief Getter for the LOXfuelLevel
+	 * @return the LOX fuel level value
+	 */
+	public: virtual int getLOXfuelLevel()=0;
+
+	/**
+	 * @brief Sets the LOX fuel level
+	 * @param[in] aLOXfuelLevel The value LOX fuel level should be set to
+	 */
+	public: virtual void setLOXfuelLevel(int aLOXfuelLevel)=0;
+
+	/**
+	 * @brief Getter for the RP1 fuel level
+	 * @return RP1 fuel level
+	 */
+	public: virtual int getRP1fuelLevel()=0;
+
+	/**
+	 * @brief Setter for the RP1 fuel level
+	 * 
+	 */
+	public: virtual void setRP1fuelLevel(int aRP1fuelLevel)=0;
+
+	/**
+	 * @brief Clone function
+	 * @return Propultion pointer
+	*/
+	public: virtual Propulsion* clone()=0;
 };
 
 #endif
