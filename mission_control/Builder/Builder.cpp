@@ -12,3 +12,6 @@ void Builder::setRocketType(Rocket::RocketType aRocketType) {
 	this->_rocketType = aRocketType;
 }
 
+void Builder::setPayloadType(Payload::PayloadType aPayloadType) {
+	_payloadType = aPayloadType;
+}

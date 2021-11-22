@@ -3,7 +3,7 @@ using namespace std;
 
 #include "ConcreteBuilder.h"
 
-ConcreteBuilder::ConcreteBuilder() {
+ConcreteBuilder::ConcreteBuilder(Rocket::RocketType aRocketType, Payload::PayloadType aPayloadType) {
 	_constructionRocket = nullptr;
 	_numFirstStage = 0;
 	_currSecondStage = nullptr;
@@ -43,8 +43,6 @@ void ConcreteBuilder::setFirstStageBoosters() {
 		_numFirstStage = 3;
 	}
 }
-
-void ConcreteBuilder::setPayload(Payload* aPayload) {}
 
 Rocket* ConcreteBuilder::buildRocket() {
  	Rocket* rocket = _constructionRocket;

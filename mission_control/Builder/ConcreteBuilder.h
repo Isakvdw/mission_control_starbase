@@ -32,12 +32,14 @@ class ConcreteBuilder: public Builder
 	private: Engine _seaLevelMerlin;
 
 	/**
-	 * @brief A default constructor
+	 * @brief A parameterized constructor
+	 * @param aRocketType The type of the rocket
+	 * @param aPayloadType The type of the rockets payload
 	 * @details A default constructor that sets @p secondStageSet to 
 	 * @p false and @p numFirstStage to @p 0
 	 * It also creates a new rocket with no parts set
 	 */
-	public: ConcreteBuilder();
+	public: ConcreteBuilder(Rocket::RocketType aRocketType, Payload::PayloadType aPayloadType);
 
 	/**
 	 * @brief Returns the built rocket
@@ -60,15 +62,6 @@ class ConcreteBuilder: public Builder
 	 * 	it will also automatically add engines to the rocket
 	 */
 	public: void setFirstStageBoosters() override;
-
-	/**
-	 * @brief sets the payload of the rocket
-	 * @param[in] aPayload - The payload to be added to the rocket
-	 * @details This method will add the given payload to the rocket
-	 * @note
-	 * 		- If @p NULL is passed to the function the payload will be set to null
-	 */
-	public: void setPayload(Payload* aPayload);
 };
 
 #endif
