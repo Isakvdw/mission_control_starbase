@@ -16,6 +16,11 @@ class Booster: public Propulsion
 	private: int _lOXfuelLevel;
 	private: int _rP1fuelLevel;
 
+	/**
+	 * @brief adds a propulsion object to the composite structure
+	 * @param[in] aP the propulsion object to add to the composite
+	 * The pointer that is passed will be to the end of the vector of propulsion objects
+	 */
 	public: void add(Propulsion* aP);
 
 	public: void remove(Propulsion* aP);
