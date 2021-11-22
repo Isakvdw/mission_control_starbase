@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# no extension executable
+main
+
 # Compiled Object files
 *.slo
 *.lo
