@@ -8,16 +8,19 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Payload.h"
 
-// class SatelliteLauncher;
-// class Payload;
-// class Starlink;
+class SatelliteLauncher;
+class Payload;
+class Starlink;
 
 class Starlink: public Payload
 {
 	private: 
 		SatelliteLauncher* _satellites; 
 	public: 
-		SatelliteLauncher* _unnamed_SatelliteLauncher_;
+		Starlink();
+		void LaunchAllSatellites();
+		// SatelliteLauncher* _unnamed_SatelliteLauncher_;
+		void addSat(SatelliteLauncher* Sat);
 		string getPayloadDescription();
 		void printPayload();
 };

@@ -14,6 +14,7 @@ class SatelliteFactory;
 class SatelliteFactory: public Factory
 {
 	public: 
+		SatelliteFactory();
 		SatelliteFactory(const SatelliteFactory& obj);
 		SatelliteLauncher* createComponent();
 };

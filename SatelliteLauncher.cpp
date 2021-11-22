@@ -4,15 +4,32 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Starlink.h"
 
+SatelliteLauncher::SatelliteLauncher() {
+	this->_successor = NULL;
+}
+
 void SatelliteLauncher::handleRequest() {
-	throw "Not yet implemented"; 
+	if (this->_successor == NULL)
+	{
+		return;
+	}
+	else
+	{
+		this->_successor->handleRequest();
+		delete this->_successor;
+		this->_successor = NULL;
+		return;
+	}
 }
 
 void SatelliteLauncher::add(SatelliteLauncher* satellite) {
 	if (this->_successor != NULL){
 		this->_successor->add(satellite);
 	}
-	this->_successor = satellite;
+	else
+	{
+		this->_successor = satellite;
+	}
 }
 
 int SatelliteLauncher::count() {
