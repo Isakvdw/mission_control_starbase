@@ -7,7 +7,7 @@ using namespace std;
 
 class Payload
 {
-	protected: string _payloadDescription;
+	protected: string _payloadDescription; 
 
 	public: virtual string getPayloadDescription() = 0;
 

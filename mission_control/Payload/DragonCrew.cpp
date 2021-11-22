@@ -7,7 +7,7 @@ using namespace std;
 #include "DragonCrew.h"
 
 /**
- * @brief Construct a new Dragon Crew:: Dragon Crew object
+ * @brief Construct a new Dragon Crew:: Dragon Crew object 
  * 
  */
 DragonCrew::DragonCrew() {

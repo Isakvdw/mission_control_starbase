@@ -7,7 +7,7 @@ using namespace std;
 #include "Dragon.h"
 
 /**
- * @brief Construct a new Dragon:: Dragon object
+ * @brief Construct a new Dragon:: Dragon object 
  * 
  */
 Dragon::Dragon() {
