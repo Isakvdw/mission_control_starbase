@@ -1,4 +1,5 @@
 #include <exception>
+#include <list>
 using namespace std;
 
 #ifndef __ConcreteBuilder_h__
@@ -15,11 +16,20 @@ using namespace std;
  */
 class ConcreteBuilder: public Builder 
 {
+	/// The rocket being worked on
+	private: Rocket *_constructionRocket;
+
+	/// The current second stage of the rocket
+	private: Booster *_currSecondStage;
+
 	/// A boolean value that keeps track of whether or not a second stage has been set
 	private: bool _secondStageSet;
 
 	/// A integer value that counts the number of first stage boosters that have been added
 	private: int _numFirstStage;
+
+	/// A Buffer for First Stage Boosters and Engines
+	private: list<Propulsion *> _propulsionBuffer;
 
 	/**
 	 * @brief A default constructor
@@ -44,7 +54,7 @@ class ConcreteBuilder: public Builder
 	 * 	that the second stage has been set, if later another second stage is set,
 	 * 	it will overwrite the current second stage, adding the new one, if @p NULL
 	 * 	is passed it will remove the second stage, and log that there is no second
-	 * 	stage, any second 
+	 * 	stage, any first stage booster will be added back into the buffer queue
 	 * @note 
 	 * 		- Any Observer must be attached to the booster before adding it to the rocket.
 	 */
@@ -71,7 +81,7 @@ class ConcreteBuilder: public Builder
 	 * @note
 	 * 		- If @p NULL is passed to the function the payload will be set to null
 	 */
-	public: void setPayload(Payload* aPayload)=0;
+	public: void setPayload(Payload* aPayload);
 
 };
 

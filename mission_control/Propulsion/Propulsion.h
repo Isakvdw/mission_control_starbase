@@ -11,12 +11,27 @@ class Observer;
 
 class Propulsion
 {
+	/// A list of @p Observer objects attached
 	private: vector<Observer*> _observerList;
 
+	/**
+	 * @param[in] aP - The propulsion object to be added
+	 * @details see child classes for implementation details
+	 */
 	public: virtual void add(Propulsion* aP) = 0;
+	
+	/**
+	 * @brief See child classes for implementation details
+	 */
+	public: virtual Propulsion* popBack()=0;
 
+	/**
+	 * @param[in] aP - The propulsion object to be removed
+	 * @details see child classes for implementation details
+	 */
 	public: virtual void remove(Propulsion* aP) = 0;
 
+	
 	public: virtual void operation() = 0;
 
 	/**

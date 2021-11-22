@@ -25,14 +25,20 @@ class Booster: public Propulsion
 	 * @param[in] aP the propulsion object to add to the composite
 	 * @details @p aP will be to the vector of propulsion objects
 	 */
-	public: void add(Propulsion* aP);
+	public: void add(Propulsion* aP) override;
+
+	/**
+	 * @brief removes the last @p Propulsion object from the children container
+	 * @return The last @p Propulsion object in the children container
+	 */
+	public: Propulsion *popBack() override;
 
 	/**
 	 * @brief removes a propulsion object
 	 * @param aP Propulsion object to be removed
 	 * @details This will @p aP from the @p _children vector
 	 */
-	public: void remove(Propulsion* aP);
+	public: void remove(Propulsion* aP) override;
 	
 	/**
 	 * @brief Getter for the LOXfuelLevel
