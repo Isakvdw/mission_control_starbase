@@ -9,6 +9,14 @@ void Engine::operation() {
 	throw "Not yet implemented";
 }
 
+Engine::Engine() {
+	_engineType = "";
+}
+
+Engine::Engine(string aType) {
+	_engineType = aType;
+}
+
 Engine* Engine::clone() {
 	return new Engine(*this);
 }
