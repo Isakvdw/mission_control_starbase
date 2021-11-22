@@ -54,7 +54,7 @@ int main() {
         fHeavy->setRP1fuelLevel(fHeavy->getRP1fuelLevel() - i*11);
         fHeavy->notify();
 
-        f->setLOXfuelLevel(f->getLOXfuelLevel() - i*10);s
+        f->setLOXfuelLevel(f->getLOXfuelLevel() - i*10);
         f->setRP1fuelLevel(f->getRP1fuelLevel() - i*5);
         f->notify();
 
