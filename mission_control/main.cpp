@@ -41,9 +41,28 @@ int main() {
     fObs4->setSubjectBooster(sStage);
     fObs5->setSubjectBooster(sStage);
 
+    sStage->detach(fObs5);
+    sStage->detach(nullptr);
+    sStage->detach(fObs1);
+
+
     fHeavy->notify();
     f->notify();
     sStage->notify();
+
+    for (int i = 1; i <= 10; i++) {
+        fHeavy->setLOXfuelLevel(fHeavy->getLOXfuelLevel() - i*5);
+        fHeavy->setRP1fuelLevel(fHeavy->getRP1fuelLevel() - i*11);
+        fHeavy->notify();
+
+        f->setLOXfuelLevel(f->getLOXfuelLevel() - i*10);
+        f->setRP1fuelLevel(f->getRP1fuelLevel() - i*5);
+        f->notify();
+
+        sStage->setLOXfuelLevel(sStage->getLOXfuelLevel() - i*13);
+        sStage->setRP1fuelLevel(sStage->getRP1fuelLevel() - i*10);
+        f->notify();
+    }
 
     delete fObs5;
     delete fObs4;
