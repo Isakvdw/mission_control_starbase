@@ -8,7 +8,6 @@ using namespace std;
 // #include "Propulsion.h"
 
 class Propulsion;
-class Observer;
 
 /**
  * @brief A Booster observer class
