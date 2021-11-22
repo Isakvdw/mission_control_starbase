@@ -8,11 +8,21 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Payload.h" 
 
+/**
+ * @brief Construct a new Starlink:: Starlink object
+ * 
+ */
 Starlink::Starlink() {
 	this->_payloadDescription = "Cargo of satellites to be released into orbit!";
 	this->_satellites = NULL;
 }
 
+/**
+ * @brief Simulates the the ejection by calling the head Satellite
+ * to Handle the request which goes down the chain deleting and
+ * detaching satellites.
+ * 
+ */
 void Starlink::LaunchAllSatellites() {
 	this->printPayload();
 	if (this->_satellites != NULL) {
@@ -28,6 +38,11 @@ void Starlink::LaunchAllSatellites() {
 	}
 }
 
+/**
+ * @brief Add satellite to the chain.
+ * 
+ * @param Sat 
+ */
 void Starlink::addSat(SatelliteLauncher* Sat) {
 	if (this->_satellites == NULL)
 	{
@@ -39,6 +54,11 @@ void Starlink::addSat(SatelliteLauncher* Sat) {
 	}
 }
 
+/**
+ * @brief Gets the Starlink payload as a string.
+ * 
+ * @return string 
+ */
 string Starlink::getPayloadDescription() {
 	string out = "";
 	if (_satellites == NULL) {
@@ -53,6 +73,10 @@ string Starlink::getPayloadDescription() {
 	return out;
 }
 
+/**
+ * @brief Displays the Starlink payload to the user.
+ * 
+ */
 void Starlink::printPayload() {
 	cout<<getPayloadDescription()<<endl;
 }
