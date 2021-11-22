@@ -4,12 +4,8 @@ using namespace std;
 #ifndef __MissionControlStarbase_h__
 #define __MissionControlStarbase_h__
 
-// #include "../Rocket.h"
-// #include "../Builder.h"
-
-class Rocket;
-class Builder;
-class MissionControlStarbase;
+#include "Rocket.h"
+#include "Builder/Builder.h"
 
 class MissionControlStarbase
 {

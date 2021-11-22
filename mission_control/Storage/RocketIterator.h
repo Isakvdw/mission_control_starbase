@@ -7,7 +7,6 @@ using namespace std;
 
 #include "RocketMemento.h"
 #include "RocketAggregate.h"
-#include "../Builder/Builder.h"
 #include "Iterator.h"
 
 class RocketIterator : public Iterator
