@@ -44,9 +44,34 @@ class ConcreteBuilder: public Builder
 	 * 	that the second stage has been set, if later another second stage is set,
 	 * 	it will overwrite the current second stage, adding the new one, if @p NULL
 	 * 	is passed it will remove the second stage, and log that there is no second
-	 * 	stage
+	 * 	stage, any second 
+	 * @note 
+	 * 		- Any Observer must be attached to the booster before adding it to the rocket.
 	 */
 	public: void setSecondStage(Booster* aSecondStage) override;
+
+	/**
+	 * @brief Adds a first stage to the Rocket
+	 * @param[in] aFirstStage - The first stage to be added to the rocket
+	 * @details This method will add a first stage Booster to the rocket.
+	 * 	It does so by pushing it to the back of the second stage booster,
+	 * 	in the case that the Rocket does not yet have a second stage, it will
+	 * 	buffer the Booster in a queue, and add it once a second stage has been added
+	 * 	it will also update the variable tracking the amount of second stage boosters added.
+	 * 	@note 
+	 * 		- Any Observer must be attached to the booster before adding it to the rocket.
+	 * 		- If @p NULL is passed to the rocket, nothing will be done.
+	 */
+	public: void addFirstStage(Booster* aFirstStage) override;
+
+	/**
+	 * @brief sets the payload of the rocket
+	 * @param[in] aPayload - The payload to be added to the rocket
+	 * @details This method will add the given payload to the rocket
+	 * @note
+	 * 		- If @p NULL is passed to the function the payload will be set to null
+	 */
+	public: void setPayload(Payload* aPayload)=0;
 
 };
 
