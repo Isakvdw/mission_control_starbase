@@ -19,6 +19,7 @@ private:
 
 public:
 	RocketMemento(string s);
+	string getRocketState();
 	Caretaker *caretaker;
 	// Aggregate *rocketAggregate;
 };

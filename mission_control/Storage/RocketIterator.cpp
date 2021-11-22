@@ -12,7 +12,7 @@ RocketMemento *RocketIterator::next()
 
 bool RocketIterator::end()
 {
-	return current == _curr->size() - 1;
+	return current == _curr->size();
 }
 
 RocketMemento *RocketIterator::start()
@@ -26,6 +26,7 @@ RocketMemento *RocketIterator::getCurr()
 	return (*_curr)[current];
 }
 
-RocketIterator::RocketIterator(RocketAggregate *aRAgg) : rocketAggregate(aRAgg), current(0)
+RocketIterator::RocketIterator(vector<RocketMemento *> *c) : current(0)
 {
+	_curr = c;
 }

@@ -4,7 +4,6 @@ using namespace std;
 
 #include "RocketAggregate.h"
 
-
 void RocketAggregate::add(RocketMemento *aR)
 {
 	_mementos.push_back(aR);
@@ -24,6 +23,5 @@ void RocketAggregate::remove(RocketMemento *aR)
 
 Iterator *RocketAggregate::createIterator()
 {
-	rocket_iterator = new RocketIterator(this);
-	return rocket_iterator;
+	return new RocketIterator(&_mementos);
 }
