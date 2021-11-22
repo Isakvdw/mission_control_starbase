@@ -5,6 +5,7 @@
 using namespace std;
 
 #include "Starlink.h"
+#include "Satellite.h"
 
 /**
  * @brief Construct a new Starlink::Starlink object
@@ -33,6 +34,23 @@ Starlink::~Starlink() {
 		this->_satellites = NULL;
 		return;
 	}
+}
+
+/**
+ * @brief Starlink clones itself
+ * @details Starlink clones itself and makes a brand new 
+ * 			Starlink with all the same variables that 
+ * 			are not shallow copied.
+ * @return Starlink* 
+ */
+Starlink* Starlink::clone() {
+	int CT = this->_satellites->count();
+	Starlink * SL = new Starlink();
+	for (int x = 0; x < CT; x++)
+	{
+		SL->addSat(new Satellite());
+	}
+	return SL;
 }
 
 /**
