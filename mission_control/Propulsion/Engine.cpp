@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-#include "Engine.h"
-#include "Propulsion.h"
+#include "../Engine.h"
+#include "../Propulsion.h"
 
 void Engine::operation() {
 	throw "Not yet implemented";

@@ -1,8 +1,8 @@
 #include <exception>
 using namespace std;
 
-#include "Satellite.h"
-// #include "SatelliteLauncher.h" 
+#include "../Satellite.h"
+// #include "../SatelliteLauncher.h" 
 
 Satellite::Satellite() {
 	

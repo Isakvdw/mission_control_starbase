@@ -3,9 +3,9 @@
 #include <iostream>
 using namespace std;
 
-#include "FuelObserver.h"
-#include "Booster.h"
-#include "Observer.h"
+#include "../FuelObserver.h"
+#include "../Booster.h"
+#include "../Observer.h"
 
 FuelObserver::FuelObserver() {
 	_observerName = "";

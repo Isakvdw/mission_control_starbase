@@ -2,10 +2,10 @@
 #include <vector>
 using namespace std;
 
-#include "Propulsion.h"
-#include "Observer.h"
-#include "Rocket.h"
-#include "Booster.h"
+#include "../Propulsion.h"
+#include "../Observer.h"
+#include "../Rocket.h"
+#include "../Booster.h"
 
 void Propulsion::add(Propulsion* aP) {
 	throw "Not yet implemented";

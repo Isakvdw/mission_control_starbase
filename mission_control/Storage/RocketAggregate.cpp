@@ -2,11 +2,11 @@
 #include <vector>
 using namespace std;
 
-#include "RocketAggregate.h"
-#include "RocketMemento.h"
-#include "RocketIterator.h"
-#include "Iterator.h"
-#include "Aggregate.h"
+#include "../RocketAggregate.h"
+#include "../RocketMemento.h"
+#include "../RocketIterator.h"
+#include "../Iterator.h"
+#include "../Aggregate.h"
 
 void RocketAggregate::add(RocketMemento* aR) {
 	throw "Not yet implemented";

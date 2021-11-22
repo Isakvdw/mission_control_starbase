@@ -4,7 +4,7 @@ using namespace std;
 #ifndef __SecondStage_h__
 #define __SecondStage_h__
 
-#include "Booster.h"
+#include "../Booster.h"
 
 // class Booster;
 class SecondStage;

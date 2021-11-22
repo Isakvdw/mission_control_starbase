@@ -4,9 +4,9 @@
 #include <iostream>
 using namespace std;
 
-#include "Starlink.h"
-#include "SatelliteLauncher.h"
-#include "Payload.h" 
+#include "../Starlink.h"
+#include "../SatelliteLauncher.h"
+#include "../Payload.h" 
 
 Starlink::Starlink() {
 	this->_payloadDescription = "Cargo of satellites to be released into orbit!";

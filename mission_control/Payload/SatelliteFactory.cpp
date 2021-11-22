@@ -1,10 +1,10 @@
 #include <exception>
 using namespace std;
 
-#include "SatelliteFactory.h"
-#include "SatelliteLauncher.h"
-#include "Satellite.h"
-#include "Factory.h" 
+#include "../SatelliteFactory.h"
+#include "../SatelliteLauncher.h"
+#include "../Satellite.h"
+#include "../Factory.h" 
 
 SatelliteFactory::SatelliteFactory() {
 	

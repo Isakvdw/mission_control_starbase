@@ -5,7 +5,7 @@ using namespace std;
 #ifndef __Dragon_h__
 #define __Dragon_h__
 
-#include "Payload.h"
+#include "../Payload.h"
 
 // class Payload;
 class Dragon;
