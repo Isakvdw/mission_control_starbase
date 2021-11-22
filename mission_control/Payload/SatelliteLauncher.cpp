@@ -12,6 +12,18 @@ SatelliteLauncher::SatelliteLauncher() {
 }
 
 /**
+ * @brief Destroy the Satellite Launcher:: Satellite Launcher object
+ * 
+ */
+SatelliteLauncher::~SatelliteLauncher() {
+	if (this->_successor != NULL)
+	{
+		delete this->_successor;
+	}
+	this->_successor = NULL;
+}
+
+/**
  * @brief SatelliteLauncher goes down the chain of Satellites.
  * Once it reaches the end they detach and delete. 
  * Simulates the satellites being ejected into orbit.
