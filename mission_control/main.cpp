@@ -95,46 +95,46 @@ void observer_test()
 
 void storage_test()
 {
-    cout << "================STORAGE TEST================" << endl;
+    // cout << "================STORAGE TEST================" << endl;
 
-    // create aggregate
-    RocketAggregate *rocket_aggregate = new RocketAggregate;
+    // // create aggregate
+    // RocketAggregate *rocket_aggregate = new RocketAggregate;
 
-    // create a memento to remove later
-    RocketMemento *remove_memento = new RocketMemento("stationary");
+    // // create a memento to remove later
+    // RocketMemento *remove_memento = new RocketMemento("stationary");
 
-    // populate aggregate vector
-    rocket_aggregate->add(new RocketMemento("launched"));
-    rocket_aggregate->add(new RocketMemento("building"));
-    rocket_aggregate->add(new RocketMemento("launching"));
-    rocket_aggregate->add(remove_memento);
-    rocket_aggregate->add(new RocketMemento("low fuel"));
-    rocket_aggregate->add(new RocketMemento("building"));
+    // // populate aggregate vector
+    // rocket_aggregate->add(new RocketMemento("launched"));
+    // rocket_aggregate->add(new RocketMemento("building"));
+    // rocket_aggregate->add(new RocketMemento("launching"));
+    // rocket_aggregate->add(remove_memento);
+    // rocket_aggregate->add(new RocketMemento("low fuel"));
+    // rocket_aggregate->add(new RocketMemento("building"));
 
-    // create iterator
-    Iterator *rocket_iterator = rocket_aggregate->createIterator();
+    // // create iterator
+    // Iterator *rocket_iterator = rocket_aggregate->createIterator();
 
-    // print aggregate vector using iterator
-    for (; !rocket_iterator->end(); rocket_iterator->next())
-    {
-        cout << rocket_iterator->getCurr()->getRocketState() << endl;
-    }
+    // // print aggregate vector using iterator
+    // for (; !rocket_iterator->end(); rocket_iterator->next())
+    // {
+    //     cout << rocket_iterator->getCurr()->getRocketState() << endl;
+    // }
 
-    // remove remove_memento from aggregate vector
-    rocket_aggregate->remove(remove_memento);
+    // // remove remove_memento from aggregate vector
+    // rocket_aggregate->remove(remove_memento);
 
-    // reset iterator to first element
-    rocket_iterator->start();
+    // // reset iterator to first element
+    // rocket_iterator->start();
 
-    cout << "==============" << endl;
+    // cout << "==============" << endl;
 
-    // print aggregate vector using iterator
-    for (; !rocket_iterator->end(); rocket_iterator->next())
-    {
-        cout << rocket_iterator->getCurr()->getRocketState() << endl;
-    }
+    // // print aggregate vector using iterator
+    // for (; !rocket_iterator->end(); rocket_iterator->next())
+    // {
+    //     cout << rocket_iterator->getCurr()->getRocketState() << endl;
+    // }
 
-    cout << "==============STORAGE TEST DONE==============" << endl;
+    // cout << "==============STORAGE TEST DONE==============" << endl;
 }
 
 void builder_test() {
