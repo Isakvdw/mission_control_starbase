@@ -11,58 +11,95 @@ using namespace std;
  * @brief Booster class, child of Propulsion
  * @author Jonathan Enslin - u19103345
  */
-class Booster: public Propulsion
+class Booster : public Propulsion
 {
 	/// Children in the composite structure
-	private: vector<Propulsion*> _children;
+private:
+	vector<Propulsion *> _children;
 	/// LOX Fuel level as a percentage
-	private: int _lOXfuelLevel;
+private:
+	int _lOXfuelLevel;
 	/// RP1 Fuel level as a percentage
-	private: int _rP1fuelLevel;
+private:
+	int _rP1fuelLevel;
+
+	/// booster ID as int
+private:
+	static int booster_id;
 
 	/**
 	 * @brief adds a propulsion object to the composite structure
 	 * @param[in] aP the propulsion object to add to the composite
 	 * @details @p aP will be to the vector of propulsion objects
 	 */
-	public: void add(Propulsion* aP) override;
+public:
+	void
+	add(Propulsion *aP) override;
 
 	/**
 	 * @brief removes a propulsion object
 	 * @param aP Propulsion object to be removed
 	 * @details This will @p aP from the @p _children vector
 	 */
-	public: void remove(Propulsion* aP) override;
-	
+public:
+	void remove(Propulsion *aP) override;
+
 	/**
 	 * @brief Getter for the LOXfuelLevel
 	 * @return the LOX fuel level value
 	 */
-	public: int getLOXfuelLevel();
+public:
+	int getLOXfuelLevel();
 
 	/**
 	 * @brief Sets the LOX fuel level
 	 * @param[in] aLOXfuelLevel The value LOX fuel level should be set to
 	 */
-	public: void setLOXfuelLevel(int aLOXfuelLevel);
+public:
+	void setLOXfuelLevel(int aLOXfuelLevel);
 
 	/**
 	 * @brief Getter for the RP1 fuel level
 	 * @return RP1 fuel level
 	 */
-	public: int getRP1fuelLevel();
+public:
+	int getRP1fuelLevel();
 
 	/**
 	 * @brief Setter for the RP1 fuel level
 	 * 
 	 */
-	public: void setRP1fuelLevel(int aRP1fuelLevel);
+public:
+	void setRP1fuelLevel(int aRP1fuelLevel);
+
+	/**
+	 * @brief Getter for the booster id
+	 * @return booster id
+	 */
+public:
+	int getBoosterId();
+
+	/**
+	 * @brief Sets the booster id
+	 * @param[in] id The value the booster id should be set to
+	 */
+public:
+	void setBoosterId(int id);
+
+	/**
+	 * @brief Getter for the booster name
+	 * @return booster name as string
+	 */
+public:
+	virtual string getName();
 
 	/// @todo find out what this is
-	public: virtual void operation();
+public:
+	virtual void operation();
 
 	///Do nothing
-	public: Propulsion* clone();
+public:
+	Propulsion *clone();
 };
 
 #endif
