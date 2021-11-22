@@ -17,7 +17,7 @@ class Engine: public Propulsion
 	 * @brief Creates a clone of the engine
 	 * @return Pointer to the clone of this engine
 	 */
-	public: Engine* clone();
+	public: Propulsion* clone();
 
 	/**
 	 * Default constructor for Engine, sets type to an empty string
@@ -44,6 +44,20 @@ class Engine: public Propulsion
 	
 	/// Does nothing
 	public: virtual void remove(Propulsion* aP);
+
+	/// Does nothing
+	public: int getLOXfuelLevel();
+
+	/// Does nothing
+	public: int getRP1fuelLevel();
+
+	/// Does nothing
+	public: void setLOXfuelLevel(int);
+	
+	/// Does nothing
+	public: void setRP1fuelLevel(int);
+
+
 };
 
 #endif

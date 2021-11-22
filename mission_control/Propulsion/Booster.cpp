@@ -37,3 +37,8 @@ void Booster::operation() {
 	throw "Not yet implemented";
 }
 
+Propulsion* Booster::clone(){
+	//DO NOTHING
+	return NULL;
+}
+

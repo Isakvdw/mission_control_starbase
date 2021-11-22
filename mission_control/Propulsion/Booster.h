@@ -60,6 +60,9 @@ class Booster: public Propulsion
 
 	/// @todo find out what this is
 	public: virtual void operation();
+
+	///Do nothing
+	public: Propulsion* clone();
 };
 
 #endif
