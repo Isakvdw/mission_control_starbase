@@ -8,8 +8,8 @@ using namespace std;
 
 class BuildS: public State
 {
-
-	public: void changeState(Rocket* aR);
+	public: 
+		void changeState(Rocket* aR);
 };
 
 #endif
