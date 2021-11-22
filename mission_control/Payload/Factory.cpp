@@ -1,5 +1,5 @@
 #include <exception>
 using namespace std;
 
-#include "../Factory.h"
-#include "../SatelliteLauncher.h"
+#include "Factory.h"
+#include "SatelliteLauncher.h"

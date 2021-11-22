@@ -5,8 +5,8 @@ using namespace std;
 #ifndef __FuelObserver_h__
 #define __FuelObserver_h__
 
-// #include "../Booster.h"
-#include "../Observer.h"
+// #include "Booster.h"
+#include "Observer.h"
 
 class Booster;
 // class Observer;

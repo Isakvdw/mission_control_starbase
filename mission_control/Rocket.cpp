@@ -1,9 +1,9 @@
 
-#include "../Rocket.h"
-#include "../Propulsion.h"
-#include "../Payload.h"
-#include "../MissionControlStarbase.h"
-#include "../State.h"
+#include "Rocket.h"
+#include "Propulsion.h"
+#include "Payload.h"
+#include "MissionControlStarbase.h"
+#include "State.h"
 
 Propulsion* Rocket::getPropulsion() {
 	return this->_propulsion;

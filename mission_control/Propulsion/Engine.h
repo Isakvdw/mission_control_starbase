@@ -5,7 +5,7 @@ using namespace std;
 #ifndef __Engine_h__
 #define __Engine_h__
 
-#include "../Propulsion.h"
+#include "Propulsion.h"
 
 // class Propulsion;
 class Engine;

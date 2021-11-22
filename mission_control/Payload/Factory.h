@@ -4,7 +4,7 @@ using namespace std;
 #ifndef __Factory_h__
 #define __Factory_h__
 
-// #include "../SatelliteLauncher.h"
+// #include "SatelliteLauncher.h"
 
 class SatelliteLauncher;
 class Factory;

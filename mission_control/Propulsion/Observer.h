@@ -5,7 +5,7 @@ using namespace std;
 #ifndef __Observer_h__
 #define __Observer_h__
 
-// #include "../Propulsion.h"
+// #include "Propulsion.h"
 
 class Propulsion;
 class Observer;

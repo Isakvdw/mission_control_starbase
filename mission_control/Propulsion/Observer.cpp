@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-#include "../Observer.h"
-#include "../Propulsion.h"
+#include "Observer.h"
+#include "Propulsion.h"
 
 
 void Observer::setName(string aName) {

@@ -2,10 +2,10 @@
 #ifndef __Rocket_h__
 #define __Rocket_h__
 
-// #include "../Propulsion.h"
-// #include "../Payload.h"
-// #include "../MissionControlStarbase.h"
-// #include "../State.h"
+// #include "Propulsion.h"
+// #include "Payload.h"
+// #include "MissionControlStarbase.h"
+// #include "State.h"
 
 class Propulsion;
 class Payload;

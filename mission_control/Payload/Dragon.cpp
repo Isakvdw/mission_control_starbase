@@ -4,8 +4,8 @@
 #include <iostream>
 using namespace std;
 
-#include "../Dragon.h"
-#include "../Payload.h"
+#include "Dragon.h"
+#include "Payload.h"
 
 Dragon::Dragon() {
 	this->_payloadDescription = "Cargo to be sent to ISS!";

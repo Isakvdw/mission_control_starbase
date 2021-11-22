@@ -4,7 +4,7 @@ using namespace std;
 #ifndef __FalconHeavy_h__
 #define __FalconHeavy_h__
 
-#include "../Booster.h"
+#include "Booster.h"
 
 // class Booster;
 class FalconHeavy;

@@ -5,7 +5,7 @@ using namespace std;
 #ifndef __Booster_h__
 #define __Booster_h__
 
-#include "../Propulsion.h"
+#include "Propulsion.h"
 
 // class Propulsion;
 class Booster;
