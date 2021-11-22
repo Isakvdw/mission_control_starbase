@@ -13,6 +13,7 @@ class Dragon: public Payload
 		Dragon(const Dragon& obj);
 		Dragon();
 		string getPayloadDescription();
+		Payload* clone();
 	public: 
 		void printPayload();
 };

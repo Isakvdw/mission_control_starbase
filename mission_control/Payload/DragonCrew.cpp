@@ -91,3 +91,11 @@ void DragonCrew::printPayload() {
 	cout<<getPayloadDescription()<<endl;
 }
 
+/**
+ * @brief A clone for the dragon crew
+ * @return A Payload Pointer
+*/
+
+Payload* DragonCrew::clone(){
+	return new DragonCrew(*this);
+}

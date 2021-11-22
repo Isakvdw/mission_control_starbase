@@ -6,10 +6,14 @@ using namespace std;
 
 #include "Booster.h"
 
-class FalconHeavy: public Booster
+class FalconHeavy : public Booster
 {
 
-	public: void operation();
+public:
+	void operation();
+
+public:
+	string getName() override;
 };
 
 #endif
