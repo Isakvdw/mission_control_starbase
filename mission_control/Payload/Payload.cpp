@@ -4,7 +4,7 @@ using namespace std;
 
 #include "Payload.h"
 
-string Payload::getPayloadDescription() {
+string Payload::getPayloadDescription() { 
 	return this->_payloadDescription;
 }
 

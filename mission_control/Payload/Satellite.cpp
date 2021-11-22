@@ -4,7 +4,7 @@ using namespace std;
 #include "Satellite.h"
 
 /**
- * @brief Construct a new Satellite:: Satellite object
+ * @brief Construct a new Satellite:: Satellite object 
  * 
  */
 Satellite::Satellite() {

@@ -2,7 +2,7 @@
 using namespace std;
 
 #ifndef __SatelliteFactory_h__
-#define __SatelliteFactory_h__
+#define __SatelliteFactory_h__ 
 
 #include "Factory.h"
 #include "Satellite.h"

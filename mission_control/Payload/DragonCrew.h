@@ -7,7 +7,7 @@ using namespace std;
 
 #include "Payload.h"
 
-class DragonCrew: public Payload
+class DragonCrew: public Payload 
 {
 	private:
 		string crew[7] = {"","","","","","",""};

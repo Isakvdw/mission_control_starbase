@@ -2,7 +2,7 @@
 using namespace std;
 
 #ifndef __SatelliteLauncher_h__
-#define __SatelliteLauncher_h__
+#define __SatelliteLauncher_h__ 
 
 class SatelliteLauncher
 {

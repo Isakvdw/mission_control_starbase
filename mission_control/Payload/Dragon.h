@@ -7,7 +7,7 @@ using namespace std;
 
 #include "Payload.h"
 
-class Dragon: public Payload
+class Dragon: public Payload 
 {
 	public:
 		Dragon(const Dragon& obj);
