@@ -4,23 +4,20 @@ using namespace std;
 #ifndef __Caretaker_h__
 #define __Caretaker_h__
 
-// #include "Aggregate.h"
-// #include "Iterator.h"
-// #include "RocketMemento.h"
-
-class Aggregate;
-class Iterator;
-class RocketMemento;
-class Caretaker;
+#include "Aggregate.h"
+#include "Iterator.h"
+#include "RocketMemento.h"
 
 class Caretaker
 {
-	private: Aggregate* _mementos;
-	public: Iterator* _unnamed_Iterator_;
-	public: RocketMemento* _unnamed_RocketMemento_;
-	public: Aggregate* _unnamed_Aggregate_;
+private:
+	Aggregate *_mementos;
 
-	public: Iterator* createIterator();
+public:
+	Iterator *rocketIterator;
+	RocketMemento *rocketMemento;
+	Aggregate *rocketAggregate;
+	Iterator *createIterator();
 };
 
 #endif

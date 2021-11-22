@@ -5,25 +5,31 @@ using namespace std;
 #include "RocketIterator.h"
 #include "RocketMemento.h"
 #include "RocketAggregate.h"
-#include "Builder.h"
+#include "../Builder/Builder.h"
 #include "Iterator.h"
 
-RocketMemento* RocketIterator::next() {
-	throw "Not yet implemented";
+RocketMemento *RocketIterator::next()
+{
+	++current;
+	return (*_curr)[current];
 }
 
-bool RocketIterator::end() {
-	throw "Not yet implemented";
+bool RocketIterator::end()
+{
+	return current == _curr->size() - 1;
 }
 
-RocketMemento* RocketIterator::start() {
-	throw "Not yet implemented";
+RocketMemento *RocketIterator::start()
+{
+	current = 0;
+	return (*_curr)[current];
 }
 
-RocketMemento* RocketIterator::getCurr() {
-	throw "Not yet implemented";
+RocketMemento *RocketIterator::getCurr()
+{
+	return (*_curr)[current];
 }
 
-RocketIterator::RocketIterator(RocketAggregate* aRAgg) {
+RocketIterator::RocketIterator(RocketAggregate *aRAgg) : rocketAggregate(aRAgg), current(0)
+{
 }
-

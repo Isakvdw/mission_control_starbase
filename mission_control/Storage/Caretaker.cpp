@@ -6,7 +6,7 @@ using namespace std;
 #include "Iterator.h"
 #include "RocketMemento.h"
 
-Iterator* Caretaker::createIterator() {
+Iterator *Caretaker::createIterator()
+{
 	throw "Not yet implemented";
 }
-

@@ -4,20 +4,19 @@
 #include <string>
 #include <iostream>
 
-using namespace std; 
+using namespace std;
 
-// #include "Caretaker.h"
-// #include "Aggregate.h"
-
-class Caretaker;
-class Aggregate;
-class RocketMemento;
-
+#include "Caretaker.h"
+#include "Aggregate.h"
 class RocketMemento
 {
-	private: string _rocket_state;
-	public: Caretaker* _unnamed_Caretaker_;
-	public: Aggregate* _unnamed_Aggregate_;
+private:
+	string _rocket_state;
+
+public:
+	RocketMemento(string s);
+	Caretaker *caretaker;
+	Aggregate *rocketAggregate;
 };
 
 #endif
