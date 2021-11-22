@@ -2,8 +2,14 @@
 using namespace std;
 
 #include "BuildS.h"
+#include "FuelS.h"
 
+/**
+ * @brief Changes the state of the rocket from Build state.
+ * 
+ * @param aR 
+ */
 void BuildS::changeState(Rocket* aR) {
-	throw "Not yet implemented";
+	aR->setState(new FuelS());
+	delete this;
 }
-
