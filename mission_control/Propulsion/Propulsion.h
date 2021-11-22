@@ -22,7 +22,8 @@ class Propulsion
 	/**
 	 * Adds an observer to the observer list
 	 * @param[in] aO A pointer to the observer to be added to the observer list 
-	 * @note Observer also has to register with respective object to function correctly
+	 * @note 
+	 * 		- Observer also has to register with respective object to function correctly
 	 */
 	public: void attach(Observer* aO);
 

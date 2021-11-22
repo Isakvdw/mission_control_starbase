@@ -90,6 +90,7 @@ void observer_test()
     cout << "==============OBSERVER TEST DONE==============" << endl;
 }
 
+<<<<<<< HEAD
 void storage_test()
 {
     cout << "================STORAGE TEST================" << endl;
@@ -133,3 +134,6 @@ void storage_test()
 
     cout << "==============STORAGE TEST DONE==============" << endl;
 }
+=======
+
+>>>>>>> 8771ce7bf7f30ad5096db5fa6b73740096d9deec
