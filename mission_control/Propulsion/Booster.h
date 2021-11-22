@@ -7,8 +7,6 @@ using namespace std;
 
 #include "Propulsion.h"
 
-// class Propulsion;
-class Booster;
 /**
  * @brief Booster class, child of Propulsion
  * @author Jonathan Enslin - u19103345

@@ -4,8 +4,9 @@ using namespace std;
 #ifndef __Iterator_h__
 #define __Iterator_h__
 
-#include "Caretaker.h"
-#include "RocketMemento.h"
+// #include "RocketMemento.h"
+
+class RocketMemento;
 
 class Iterator
 {

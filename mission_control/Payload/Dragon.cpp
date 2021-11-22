@@ -5,7 +5,7 @@
 using namespace std;
 
 #include "Dragon.h"
-#include "Payload.h"
+
 /**
  * @brief Construct a new Dragon:: Dragon object
  * 

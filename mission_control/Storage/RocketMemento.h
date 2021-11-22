@@ -6,8 +6,12 @@
 
 using namespace std;
 
-#include "Caretaker.h"
-#include "Aggregate.h"
+// #include "Caretaker.h"
+//#include "Aggregate.h"
+
+class Caretaker;
+// class Aggregate;
+
 class RocketMemento
 {
 private:
@@ -16,7 +20,7 @@ private:
 public:
 	RocketMemento(string s);
 	Caretaker *caretaker;
-	Aggregate *rocketAggregate;
+	// Aggregate *rocketAggregate;
 };
 
 #endif

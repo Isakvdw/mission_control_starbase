@@ -2,7 +2,6 @@
 using namespace std;
 
 #include "SatelliteLauncher.h"
-#include "Starlink.h"
 
 /**
  * @brief Construct a new Satellite Launcher:: Satellite Launcher object

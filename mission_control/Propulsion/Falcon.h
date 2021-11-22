@@ -6,9 +6,6 @@ using namespace std;
 
 #include "Booster.h"
 
-// class Booster;
-class Falcon;
-
 class Falcon: public Booster
 {
 

@@ -6,8 +6,6 @@ using namespace std;
 #define __Propulsion_h__
 
 #include "Observer.h"
-// #include "Rocket.h"
-// #include "Booster.h"
 
 class Observer;
 

@@ -6,7 +6,9 @@ using namespace std;
 
 #include "Aggregate.h"
 #include "Iterator.h"
-#include "RocketMemento.h"
+// #include "RocketMemento.h"
+
+class RocketMemento;
 
 class Caretaker
 {

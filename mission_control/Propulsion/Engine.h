@@ -7,9 +7,6 @@ using namespace std;
 
 #include "Propulsion.h"
 
-// class Propulsion;
-class Engine;
-
 class Engine: public Propulsion
 {
 	private: string _engineType;

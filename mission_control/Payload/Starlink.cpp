@@ -5,8 +5,6 @@
 using namespace std;
 
 #include "Starlink.h"
-#include "SatelliteLauncher.h"
-#include "Payload.h" 
 
 /**
  * @brief Construct a new Starlink:: Starlink object

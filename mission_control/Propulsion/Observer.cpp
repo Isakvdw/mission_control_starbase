@@ -3,8 +3,6 @@
 using namespace std;
 
 #include "Observer.h"
-#include "Propulsion.h"
-
 
 void Observer::setName(string aName) {
 	_observerName = aName;

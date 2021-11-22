@@ -5,12 +5,9 @@ using namespace std;
 #ifndef __FuelObserver_h__
 #define __FuelObserver_h__
 
-// #include "Booster.h"
+#include "Booster.h"
 #include "Observer.h"
 
-class Booster;
-// class Observer;
-class FuelObserver;
 /**
  * @brief A class that observers fuel
  * @author Jonathan Enslin - u19103345

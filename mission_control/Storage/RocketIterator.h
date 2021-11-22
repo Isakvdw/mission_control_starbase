@@ -5,9 +5,11 @@ using namespace std;
 #ifndef __RocketIterator_h__
 #define __RocketIterator_h__
 
-#include "RocketMemento.h"
-#include "RocketAggregate.h"
 #include "Iterator.h"
+// #include "RocketAggregate.h"
+#include "RocketMemento.h"
+
+class RocketAggregate;
 
 class RocketIterator : public Iterator
 {
@@ -17,7 +19,7 @@ private:
 
 public:
 	RocketAggregate *rocketAggregate;
-	Builder *rocketBuilder;
+	// Builder *rocketBuilder;
 	RocketMemento *next();
 	bool end();
 	RocketMemento *start();

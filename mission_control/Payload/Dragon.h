@@ -7,9 +7,6 @@ using namespace std;
 
 #include "Payload.h"
 
-// class Payload;
-class Dragon;
-
 class Dragon: public Payload
 {
 	public:

@@ -3,7 +3,6 @@
 using namespace std;
 
 #include "Booster.h"
-#include "Propulsion.h"
 
 void Booster::add(Propulsion* aP) {
 	_children.push_back(aP);

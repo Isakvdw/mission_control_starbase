@@ -4,12 +4,8 @@ using namespace std;
 #ifndef __SatelliteFactory_h__
 #define __SatelliteFactory_h__
 
-// #include "../SatelliteLauncher.h"
-#include "../Factory.h"
-
-class SatelliteLauncher;
-// class Factory;
-class SatelliteFactory; 
+#include "Factory.h"
+#include "Satellite.h"
 
 class SatelliteFactory: public Factory
 {
