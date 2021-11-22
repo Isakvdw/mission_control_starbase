@@ -7,10 +7,19 @@ using namespace std;
 #include "DragonCrew.h"
 #include "Payload.h"
 
+/**
+ * @brief Construct a new Dragon Crew:: Dragon Crew object
+ * 
+ */
 DragonCrew::DragonCrew() {
 	this->_payloadDescription = "Cargo and Crew to be transported to the ISS!";
 }
 
+/**
+ * @brief Construct a new Dragon Crew:: Dragon Crew object
+ * 
+ * @param obj 
+ */
 DragonCrew::DragonCrew(const DragonCrew& obj) {
 	for (int x = 0; x < 7; x++)
 	{
@@ -19,6 +28,12 @@ DragonCrew::DragonCrew(const DragonCrew& obj) {
 	this->_payloadDescription = obj._payloadDescription;
 }
 
+/**
+ * @brief Insert a crew member into the DragonCrew object.
+ * 
+ * @param Name 
+ * @param Rank 
+ */
 void DragonCrew::insertCrew(string Name, string Rank) {
 	for(int x = 0; x < 7; x++)
 	{
@@ -33,6 +48,11 @@ void DragonCrew::insertCrew(string Name, string Rank) {
 	return;
 }
 
+/**
+ * @brief Gets the description of the DragonCrew payload as a string.
+ * 
+ * @return string 
+ */
 string DragonCrew::getPayloadDescription() {
 	bool b = false;
 	string out = "Crew members : \n";
@@ -53,6 +73,10 @@ string DragonCrew::getPayloadDescription() {
 	return out;
 }
 
+/**
+ * @brief Displays the DragonCrew payload to the user.
+ * 
+ */
 void DragonCrew::printPayload() {
 	cout<<getPayloadDescription()<<endl;
 }
