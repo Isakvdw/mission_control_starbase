@@ -5,26 +5,32 @@
 #include "Propulsion/Falcon.h"
 #include "Propulsion/FalconHeavy.h"
 
+#include "Storage/Aggregate.h"
+#include "Storage/Iterator.h"
+#include "Storage/RocketAggregate.h"
+#include "Storage/RocketIterator.h"
+#include "Storage/RocketMemento.h"
+
 using namespace std;
 
 void observer_test();
+void storage_test();
 
-int main() {
+int main()
+{
     observer_test();
+    storage_test();
     return 0;
 }
 
-void observer_test() {
+void observer_test()
+{
     cout << "================OBSERVER TEST================" << endl;
     Booster *fHeavy = new FalconHeavy();
     Booster *f = new Falcon();
     Booster *sStage = new SecondStage();
 
-    FuelObserver *fObs1 = new FuelObserver("Observer-1")
-                , *fObs2 = new FuelObserver("Observer-2")
-                , *fObs3 = new FuelObserver("Observer-3")
-                , *fObs4 = new FuelObserver("Observer-4")
-                , *fObs5 = new FuelObserver("Observer-5");
+    FuelObserver *fObs1 = new FuelObserver("Observer-1"), *fObs2 = new FuelObserver("Observer-2"), *fObs3 = new FuelObserver("Observer-3"), *fObs4 = new FuelObserver("Observer-4"), *fObs5 = new FuelObserver("Observer-5");
 
     fHeavy->setLOXfuelLevel(100);
     fHeavy->setRP1fuelLevel(100);
@@ -52,12 +58,12 @@ void observer_test() {
     sStage->detach(nullptr);
     sStage->detach(fObs1);
 
-
     fHeavy->notify();
     f->notify();
     sStage->notify();
 
-    for (int i = 1; i <= 12; i++) {
+    for (int i = 1; i <= 12; i++)
+    {
         fHeavy->setLOXfuelLevel(fHeavy->getLOXfuelLevel() - 5);
         fHeavy->setRP1fuelLevel(fHeavy->getRP1fuelLevel() - 11);
         fHeavy->notify();
@@ -82,4 +88,48 @@ void observer_test() {
     delete fHeavy;
 
     cout << "==============OBSERVER TEST DONE==============" << endl;
+}
+
+void storage_test()
+{
+    cout << "================STORAGE TEST================" << endl;
+
+    // create aggregate
+    RocketAggregate *rocket_aggregate = new RocketAggregate;
+
+    // create a memento to remove later
+    RocketMemento *remove_memento = new RocketMemento("stationary");
+
+    // populate aggregate vector
+    rocket_aggregate->add(new RocketMemento("launched"));
+    rocket_aggregate->add(new RocketMemento("building"));
+    rocket_aggregate->add(new RocketMemento("launching"));
+    rocket_aggregate->add(remove_memento);
+    rocket_aggregate->add(new RocketMemento("low fuel"));
+    rocket_aggregate->add(new RocketMemento("building"));
+
+    // create iterator
+    Iterator *rocket_iterator = rocket_aggregate->createIterator();
+
+    // print aggregate vector using iterator
+    for (; !rocket_iterator->end(); rocket_iterator->next())
+    {
+        cout << rocket_iterator->getCurr()->getRocketState() << endl;
+    }
+
+    // remove remove_memento from aggregate vector
+    rocket_aggregate->remove(remove_memento);
+
+    // reset iterator to first element
+    rocket_iterator->start();
+
+    cout << "==============" << endl;
+
+    // print aggregate vector using iterator
+    for (; !rocket_iterator->end(); rocket_iterator->next())
+    {
+        cout << rocket_iterator->getCurr()->getRocketState() << endl;
+    }
+
+    cout << "==============STORAGE TEST DONE==============" << endl;
 }
