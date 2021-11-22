@@ -10,6 +10,7 @@ using namespace std;
 
 /**
  * @brief Interface for a basic rocket builder class
+ * @note Abstract class
  */
 class Builder
 {
