@@ -3,7 +3,7 @@ main: out/*.o
 out/*.o: *.cpp */*.cpp
 	g++ -c -g */*.cpp *.cpp; mv -f *.o out/
 run:
-	main
+	make
 	./main
 clean:
 	-@rm out/*.o main 2>/dev/null

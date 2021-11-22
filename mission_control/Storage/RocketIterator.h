@@ -5,9 +5,8 @@ using namespace std;
 #ifndef __RocketIterator_h__
 #define __RocketIterator_h__
 
-// #include "RocketMemento.h"
-// #include "RocketAggregate.h"
-// #include "Builder.h"
+#include "RocketMemento.h"
+#include "RocketAggregate.h"
 #include "Iterator.h"
 
 class RocketMemento;

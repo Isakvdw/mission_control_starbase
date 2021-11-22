@@ -3,9 +3,6 @@
 using namespace std;
 
 #include "Builder.h"
-#include "MissionControlStarbase.h"
-#include "RocketIterator.h"
-#include "Rocket.h"
 
 Rocket* Builder::buildRocket() {
 	throw "Not yet implemented";

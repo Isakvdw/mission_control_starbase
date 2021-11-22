@@ -5,14 +5,8 @@ using namespace std;
 #ifndef __Builder_h__
 #define __Builder_h__
 
-// #include "MissionControlStarbase.h"
-// #include "RocketIterator.h"
-// #include "Rocket.h"
-
-class MissionControlStarbase;
-class RocketIterator;
-class Rocket;
-class Builder;
+//#include "../MissionControlStarbase.h"
+#include "../Rocket.h"
 
 class Builder
 {

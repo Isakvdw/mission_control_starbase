@@ -3,10 +3,6 @@
 using namespace std;
 
 #include "RocketIterator.h"
-#include "RocketMemento.h"
-#include "RocketAggregate.h"
-#include "Builder.h"
-#include "Iterator.h"
 
 RocketMemento* RocketIterator::next() {
 	throw "Not yet implemented";

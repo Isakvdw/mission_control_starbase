@@ -5,14 +5,11 @@ using namespace std;
 #ifndef __Propulsion_h__
 #define __Propulsion_h__
 
-// #include "Observer.h"
+#include "Observer.h"
 // #include "Rocket.h"
 // #include "Booster.h"
 
 class Observer;
-class Rocket;
-// class Booster;
-class Propulsion;
 
 class Propulsion
 {

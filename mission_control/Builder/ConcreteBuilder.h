@@ -7,10 +7,6 @@ using namespace std;
 // #include "Rocket.h"
 #include "Builder.h"
 
-class Rocket;
-// class Builder;
-class ConcreteBuilder;
-
 class ConcreteBuilder: public Builder
 {
 
