@@ -8,9 +8,9 @@ using namespace std;
 #include "SatelliteLauncher.h"
 #include "Payload.h"
 
-// class SatelliteLauncher;
-// class Payload;
-// class Starlink;
+class SatelliteLauncher;
+class Payload;
+class Starlink;
 
 class Starlink: public Payload
 {
@@ -18,7 +18,9 @@ class Starlink: public Payload
 		SatelliteLauncher* _satellites; 
 	public: 
 		Starlink();
+		void LaunchAllSatellites();
 		// SatelliteLauncher* _unnamed_SatelliteLauncher_;
+		void addSat(SatelliteLauncher* Sat);
 		string getPayloadDescription();
 		void printPayload();
 };

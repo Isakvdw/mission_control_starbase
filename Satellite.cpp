@@ -5,7 +5,7 @@ using namespace std;
 // #include "SatelliteLauncher.h" 
 
 Satellite::Satellite() {
-	this->_successor = NULL;
+	
 }
 
 Satellite::Satellite(const Satellite& obj) {
