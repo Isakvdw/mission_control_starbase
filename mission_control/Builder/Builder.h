@@ -47,7 +47,7 @@ class Builder
 	 * @brief Adder for the first stage of the rocket
 	 * @details See the the children classes for implementation details
 	 */
-	public: virtual void addFirstStage()=0;
+	public: virtual void setFirstStageBoosters()=0;
 
 	/**
 	 * @brief Setter for the payload of the rocket being built

@@ -5,12 +5,12 @@ using namespace std;
 #ifndef __ConcreteBuilder_h__
 #define __ConcreteBuilder_h__
 
-#include "../Rocket.h"
 #include "Builder.h"
-#include "Propulsion/SecondStage.h"
-#include "Propulsion/Engine.h"
-#include "Propulsion/FalconHeavy.h"
-#include "Propulsion/Falcon.h"
+#include "../Rocket.h"
+#include "../Propulsion/SecondStage.h"
+#include "../Propulsion/Engine.h"
+#include "../Propulsion/FalconHeavy.h"
+#include "../Propulsion/Falcon.h"
 
 /**
  * @brief Implements @p Builder, constructs Rockets according to a structure

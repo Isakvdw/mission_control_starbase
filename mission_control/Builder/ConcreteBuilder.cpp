@@ -21,10 +21,12 @@ void ConcreteBuilder::setSecondStage() {
 void ConcreteBuilder::setFirstStageBoosters() {
 	if (!_currSecondStage) setSecondStage();
 	if (_rocketType == Rocket::FALCON9) {
-		
+		// Fa
 	}
 
 }
+
+void ConcreteBuilder::setPayload(Payload* aPayload) {}
 
 Rocket* ConcreteBuilder::buildRocket() {
 	Rocket *rocket = _constructionRocket;
