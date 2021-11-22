@@ -25,6 +25,7 @@ void ConcreteBuilder::setSecondStage() {
 void ConcreteBuilder::setFirstStageBoosters() {
 	if (!_currSecondStage) setSecondStage();
 	Booster* booster;
+	if (_numFirstStage != 0) return;
 	if (_rocketType == Rocket::FALCON9) {
 		booster = new Falcon(); 
 		for (int i = 0; i < 9; i++) {
