@@ -19,6 +19,7 @@ class DragonCrew: public Payload
 		string getPayloadDescription();
 	public: 
 		void printPayload();
+		Payload* clone();
 };
 
 #endif

@@ -43,3 +43,11 @@ void Dragon::printPayload() {
 	cout<<getPayloadDescription()<<endl;
 }
 
+/**
+ * @brief clone function for Dragon
+ * @return a pointer to payload
+*/
+
+Payload* Dragon::clone(){
+	return new Dragon(*this);
+}

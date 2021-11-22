@@ -25,6 +25,8 @@ class Payload
 	public: virtual string getPayloadDescription() = 0;
 
 	public: virtual void printPayload() = 0;
+
+	public: virtual Payload* clone()=0;
 };
 
 #endif
