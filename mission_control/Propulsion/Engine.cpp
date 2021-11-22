@@ -16,7 +16,7 @@ Engine::Engine(string aType) {
 	_engineType = aType;
 }
 
-Engine* Engine::clone() {
+Propulsion* Engine::clone() {
 	return new Engine(*this);
 }
 
