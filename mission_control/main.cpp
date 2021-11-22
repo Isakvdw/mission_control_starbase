@@ -11,10 +11,13 @@
 #include "Storage/RocketIterator.h"
 #include "Storage/RocketMemento.h"
 
+#include "Builder/ConcreteBuilder.h"
+
 using namespace std;
 
 void observer_test();
 void storage_test();
+void builder_test();
 
 int main()
 {
@@ -133,4 +136,30 @@ void storage_test()
 
     cout << "==============STORAGE TEST DONE==============" << endl;
 }
+
+void builder_test() {
+}
+
+/*
+getSec()      SecondStage
+                  |
+                  |
+                  |   0      1      2
+getFirst(int) Engine, First, First, First
+                       |
+                       |    
+                    eng 1..9
+*/
+
+
+/*
+            SecondStage <- s1
+                  |
+                  |
+                  |   0      1      2
+         Engine, First, First, First
+                       |
+                       |    
+                    eng 1..9
+*/
 

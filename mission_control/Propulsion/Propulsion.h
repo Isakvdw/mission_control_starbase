@@ -19,11 +19,6 @@ class Propulsion
 	 * @details see child classes for implementation details
 	 */
 	public: virtual void add(Propulsion* aP) = 0;
-	
-	/**
-	 * @brief See child classes for implementation details
-	 */
-	public: virtual Propulsion* popBack()=0;
 
 	/**
 	 * @param[in] aP - The propulsion object to be removed

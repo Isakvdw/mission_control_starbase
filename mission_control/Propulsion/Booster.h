@@ -28,12 +28,6 @@ class Booster: public Propulsion
 	public: void add(Propulsion* aP) override;
 
 	/**
-	 * @brief removes the last @p Propulsion object from the children container
-	 * @return The last @p Propulsion object in the children container
-	 */
-	public: Propulsion *popBack() override;
-
-	/**
 	 * @brief removes a propulsion object
 	 * @param aP Propulsion object to be removed
 	 * @details This will @p aP from the @p _children vector

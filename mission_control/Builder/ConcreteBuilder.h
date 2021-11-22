@@ -7,6 +7,10 @@ using namespace std;
 
 #include "../Rocket.h"
 #include "Builder.h"
+#include "Propulsion/SecondStage.h"
+#include "Propulsion/Engine.h"
+#include "Propulsion/FalconHeavy.h"
+#include "Propulsion/Falcon.h"
 
 /**
  * @brief Implements @p Builder, constructs Rockets according to a structure
@@ -21,9 +25,6 @@ class ConcreteBuilder: public Builder
 
 	/// The current second stage of the rocket
 	private: Booster *_currSecondStage;
-
-	/// A boolean value that keeps track of whether or not a second stage has been set
-	private: bool _secondStageSet;
 
 	/// A integer value that counts the number of first stage boosters that have been added
 	private: int _numFirstStage;
@@ -49,30 +50,17 @@ class ConcreteBuilder: public Builder
 
 	/**
 	 * @brief Sets the second stage of the rocket
-	 * @param[in] aSecondStage - The second stage to add to the rocket
-	 * @details This function will set the second stage of the rocket and log
-	 * 	that the second stage has been set, if later another second stage is set,
-	 * 	it will overwrite the current second stage, adding the new one, if @p NULL
-	 * 	is passed it will remove the second stage, and log that there is no second
-	 * 	stage, any first stage booster will be added back into the buffer queue
-	 * @note 
-	 * 		- Any Observer must be attached to the booster before adding it to the rocket.
+	 * @details This function will add a second stage to the rocket,
+	 * it will also automatically add an engine to the rocket
 	 */
-	public: void setSecondStage(Booster* aSecondStage) override;
+	public: void setSecondStage() override;
 
 	/**
 	 * @brief Adds a first stage to the Rocket
-	 * @param[in] aFirstStage - The first stage to be added to the rocket
 	 * @details This method will add a first stage Booster to the rocket.
-	 * 	It does so by pushing it to the back of the second stage booster,
-	 * 	in the case that the Rocket does not yet have a second stage, it will
-	 * 	buffer the Booster in a queue, and add it once a second stage has been added
-	 * 	it will also update the variable tracking the amount of second stage boosters added.
-	 * 	@note 
-	 * 		- Any Observer must be attached to the booster before adding it to the rocket.
-	 * 		- If @p NULL is passed to the rocket, nothing will be done.
+	 * 	it will also automatically add engines to the rocket
 	 */
-	public: void addFirstStage(Booster* aFirstStage) override;
+	public: void addFirstStage() override;
 
 	/**
 	 * @brief sets the payload of the rocket
