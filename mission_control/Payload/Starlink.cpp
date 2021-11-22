@@ -21,7 +21,7 @@ Starlink::Starlink() {
  * @brief Destroy the Starlink:: Starlink object
  * Delete the array of satelliteLaunchers.
  */
-Starlink::~Starlink() {
+Starlink::~Starlink() { 
 	if (this->_satellites != NULL) {
 		this->_satellites->handleRequest();
 		delete this->_satellites;

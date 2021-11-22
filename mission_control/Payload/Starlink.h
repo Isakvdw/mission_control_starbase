@@ -18,7 +18,7 @@ class Starlink: public Payload
 		SatelliteLauncher* _satellites; 
 	public: 
 		Starlink();
-		~Starlink();
+		~Starlink(); 
 		void LaunchAllSatellites();
 		// SatelliteLauncher* _unnamed_SatelliteLauncher_;
 		void addSat(SatelliteLauncher* Sat);
