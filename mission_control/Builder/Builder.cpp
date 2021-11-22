@@ -4,11 +4,11 @@ using namespace std;
 
 #include "Builder.h"
 
-string Builder::getRocketType() {
+Rocket::RocketType Builder::getRocketType() {
 	return this->_rocketType;
 }
 
-void Builder::setRocketType(string aRocketType) {
+void Builder::setRocketType(Rocket::RocketType aRocketType) {
 	this->_rocketType = aRocketType;
 }
 

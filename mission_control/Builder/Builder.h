@@ -16,7 +16,7 @@ using namespace std;
 class Builder
 {
 	/// The type of the rocket
-	private: string _rocketType;
+	protected: Rocket::RocketType _rocketType;
 
 	/**
 	 * @brief This methods returns the rocket that was built
@@ -27,15 +27,15 @@ class Builder
 
 	/**
 	 * @brief Getter for the rocket type
-	 * @return @p _rocketType - A string that is equal to the rockets type
+	 * @return @p _rocketType - A  that is equal to the rockets type
 	 */
-	public: string getRocketType();
+	public: Rocket::RocketType getRocketType();
 
 	/**
 	 * @brief Setter for the rocket type
 	 * @param aRocketType The type of the rocket
 	 */
-	public: void setRocketType(string aRocketType);
+	public: void setRocketType(Rocket::RocketType aRocketType);
 
 	/**
 	 * @brief Sets the second stage of the rocket

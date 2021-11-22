@@ -29,9 +29,6 @@ class ConcreteBuilder: public Builder
 	/// A integer value that counts the number of first stage boosters that have been added
 	private: int _numFirstStage;
 
-	/// A Buffer for First Stage Boosters and Engines
-	private: list<Propulsion *> _propulsionBuffer;
-
 	/**
 	 * @brief A default constructor
 	 * @details A default constructor that sets @p secondStageSet to 
@@ -60,7 +57,7 @@ class ConcreteBuilder: public Builder
 	 * @details This method will add a first stage Booster to the rocket.
 	 * 	it will also automatically add engines to the rocket
 	 */
-	public: void addFirstStage() override;
+	public: void setFirstStageBoosters() override;
 
 	/**
 	 * @brief sets the payload of the rocket

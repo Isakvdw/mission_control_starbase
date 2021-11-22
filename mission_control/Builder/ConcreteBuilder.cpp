@@ -18,11 +18,12 @@ void ConcreteBuilder::setSecondStage() {
 	}
 }
 
-void ConcreteBuilder::addFirstStage() {
+void ConcreteBuilder::setFirstStageBoosters() {
 	if (!_currSecondStage) setSecondStage();
-	if (_numFirstStage < 3) {
+	if (_rocketType == Rocket::FALCON9) {
 		
 	}
+
 }
 
 Rocket* ConcreteBuilder::buildRocket() {
