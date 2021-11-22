@@ -1,15 +1,15 @@
 main: out/*.o
-	g++ -g -o main out/*.o
+	g++ -g -o main.out out/*.o
 out/*.o: *.cpp */*.cpp
 	g++ -c -g */*.cpp *.cpp; mv -f *.o out/
 run:
 	make
-	./main
+	./main.out
 clean:
-	-@rm out/*.o main 2>/dev/null
+	-@rm out/*.o main.out 2>/dev/null
 leakcheck:
-	valgrind --leak-check=yes ./main
+	valgrind --leak-check=yes ./main.out
 gdb:
-	gdb main -ex "set disassembly-flavor intel" -ex "break main" -ex "layout reg" -ex "focus cmd"
+	gdb main.out -ex "set disassembly-flavor intel" -ex "break main" -ex "layout reg" -ex "focus cmd"
 archive:
 	tar -cvz *.h *.cpp -f archive.tar
