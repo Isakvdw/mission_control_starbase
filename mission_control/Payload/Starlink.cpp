@@ -43,7 +43,7 @@ Starlink::~Starlink() {
  * 			are not shallow copied.
  * @return Starlink* 
  */
-Starlink* Starlink::clone() {
+Payload* Starlink::clone() {
 	int CT = this->_satellites->count();
 	Starlink * SL = new Starlink();
 	for (int x = 0; x < CT; x++)
