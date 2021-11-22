@@ -38,17 +38,24 @@ class Builder
 
 	/**
 	 * @brief Sets the second stage of the rocket
-	 * @param[in] secondStage - The second stage to be added to the rocket
+	 * @param[in] aSecondStage - The second stage to be added to the rocket
 	 * @details See children classess for implementation details
 	 */
-	public: virtual void setSecondStage(Booster* secondStage)=0;
+	public: virtual void setSecondStage(Booster* aSecondStage)=0;
 
 	/**
 	 * @brief Adder for the first stage of the rocket
-	 * @param firstStage - The first stage to be added to the rocket
+	 * @param aFirstStage - The first stage to be added to the rocket
 	 * @details See the the children classes for implementation details
 	 */
-	public: virtual void addFirstStage(Booster* firstStage)=0;
+	public: virtual void addFirstStage(Booster* aFirstStage)=0;
+
+	/**
+	 * @brief Setter for the payload of the rocket being built
+	 * @param aPayload - The payload to add to the rocket
+	 * @details See children classes for implementation details
+	 */
+	public: virtual void setPayload(Payload* aPayload)=0;
 };
 
 #endif
