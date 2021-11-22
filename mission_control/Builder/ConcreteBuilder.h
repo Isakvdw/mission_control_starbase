@@ -29,6 +29,8 @@ class ConcreteBuilder: public Builder
 	/// A integer value that counts the number of first stage boosters that have been added
 	private: int _numFirstStage;
 
+	private: Engine _seaLevelMerlin;
+
 	/**
 	 * @brief A default constructor
 	 * @details A default constructor that sets @p secondStageSet to 

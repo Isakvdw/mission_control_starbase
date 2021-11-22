@@ -7,7 +7,8 @@ ConcreteBuilder::ConcreteBuilder() {
 	_constructionRocket = new Rocket();
 	_numFirstStage = 0;
 	_currSecondStage = nullptr;
-	Engine seaLevelMerlin("sea-level merlin");
+	_seaLevelMerlin.setType("sea-level merlin");
+	
 }
 
 void ConcreteBuilder::setSecondStage() {
@@ -20,10 +21,21 @@ void ConcreteBuilder::setSecondStage() {
 
 void ConcreteBuilder::setFirstStageBoosters() {
 	if (!_currSecondStage) setSecondStage();
+	Booster* booster;
 	if (_rocketType == Rocket::FALCON9) {
-		// Fa
+		booster = new Falcon(); 
+		for (int i = 0; i < 9; i++) {
+			booster->add(_seaLevelMerlin.clone());
+		}
+		_currSecondStage->add(booster);
+	} else {
+		for (int i = 0; i < 3; i++) {
+			booster = new FalconHeavy(); 
+			for (int i = 0; i < 9; i++) {
+				booster->add(_seaLevelMerlin.clone());
+			}
+		}
 	}
-
 }
 
 void ConcreteBuilder::setPayload(Payload* aPayload) {}
