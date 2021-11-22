@@ -7,6 +7,14 @@ using namespace std;
 #include "Booster.h"
 #include "Observer.h"
 
+FuelObserver::FuelObserver() {
+	_observerName = "";
+}
+
+FuelObserver::FuelObserver(string aName) {
+	_observerName = aName;
+}
+
 void FuelObserver::update() {
 	_lOXfuelState = _concreteBooster->getLOXfuelLevel();
 	_rP1fuelState = _concreteBooster->getRP1fuelLevel();
@@ -14,8 +22,8 @@ void FuelObserver::update() {
 }
 
 void FuelObserver::assessFuel() {
-	cout << "--------------------------------------------------------------------" << endl;
-	cout << "Booster (LOX, RP1) fuel levels at (" 
+	cout << "--------------------------------------------------" << endl;
+	cout << _observerName << ": (LOX, RP1) fuel levels at (" 
 		<< _lOXfuelState << "," << _rP1fuelState << ")%" << endl;
 	string lOXstate, rP1state;
 	// Get descriptions for fuel levels
@@ -23,7 +31,7 @@ void FuelObserver::assessFuel() {
 	rP1state = fuelDescription(_rP1fuelState);
 	cout << "\tLOX level: " << lOXstate << endl;
 	cout << "\tRP1 level: " << rP1state << endl;
-	cout << "--------------------------------------------------------------------" << endl;
+	cout << "--------------------------------------------------" << endl;
 }
 
 void FuelObserver::setSubjectBooster(Booster* aBooster) {

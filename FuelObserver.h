@@ -25,6 +25,17 @@ class FuelObserver: public Observer
 	private: Booster* _concreteBooster;
 
 	/**
+	 * Default constructor for FuelObserver, sets name to empty string
+	 */
+	public: FuelObserver();
+
+	/**
+	 * @brief Constructor that initialises name
+	 * @param aName The name of the Observer
+	 */
+	public: FuelObserver(string aName);
+
+	/**
 	 * @brief Called by a subject object
 	 * This will update the values of @p _lOXfuelState and @p _rP1fuelState
 	 * and then call the @sa FuelObserver::assessFuel() for the remaining functionality
