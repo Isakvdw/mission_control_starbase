@@ -15,8 +15,6 @@ class MissionControlStarbase
 {
 	private: Rocket* _currentRocket;
 	private: Builder* _rocketBuilder;
-	public: Rocket* _unnamed_Rocket_;
-	public: Builder* _unnamed_Builder_;
 
 	public: Rocket* construct(Builder* aBuilder);
 };

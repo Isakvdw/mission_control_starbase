@@ -17,8 +17,6 @@ class Builder;
 class Builder
 {
 	private: string _rocketType;
-	public: MissionControlStarbase* _unnamed_MissionControlStarbase_;
-	public: RocketIterator* _unnamed_RocketIterator_;
 
 	public: virtual Rocket* buildRocket() = 0;
 

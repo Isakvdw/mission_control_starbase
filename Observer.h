@@ -11,8 +11,6 @@ class Observer;
 
 class Observer
 {
-	public: Propulsion* _unnamed_Propulsion_;
-
 	public: virtual void update() = 0;
 };
 

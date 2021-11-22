@@ -18,10 +18,6 @@ class Rocket
 	private: Propulsion* _propulsion;
 	private: Payload* _payload;
 	private: State* _state;
-	public: MissionControlStarbase* _unnamed_MissionControlStarbase_;
-	public: Payload* _unnamed_Payload_;
-	public: Propulsion* _unnamed_Propulsion_;
-	public: State* _unnamed_State_;
 
 	public: Propulsion* getPropulsion();
 
