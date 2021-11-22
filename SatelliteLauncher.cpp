@@ -8,7 +8,7 @@ SatelliteLauncher::SatelliteLauncher() {
 	this->_successor = NULL;
 }
 
-void SatelliteLauncher::handleRequest() {
+void SatelliteLauncher::handleRequest(SatelliteLauncher* prev) {
 	throw "Not yet implemented"; 
 }
 

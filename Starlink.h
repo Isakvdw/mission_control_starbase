@@ -18,7 +18,7 @@ class Starlink: public Payload
 		SatelliteLauncher* _satellites; 
 	public: 
 		Starlink();
-		SatelliteLauncher* _unnamed_SatelliteLauncher_;
+		// SatelliteLauncher* _unnamed_SatelliteLauncher_;
 		string getPayloadDescription();
 		void printPayload();
 };

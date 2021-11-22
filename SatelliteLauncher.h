@@ -17,7 +17,7 @@ class SatelliteLauncher
 		// Starlink* _unnamed_Starlink_;
 		// SatelliteLauncher* _unnamed_SatelliteLauncher_;
 		SatelliteLauncher();
-		void handleRequest();
+		void handleRequest(SatelliteLauncher* prev);
 		void add(SatelliteLauncher* satellite); 
 		int count();
 };
