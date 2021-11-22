@@ -5,6 +5,9 @@ out/*.o: *.cpp */*.cpp
 run:
 	make
 	./main.out
+
+runonce: run clean
+
 clean:
 	-@rm out/*.o main.out 2>/dev/null
 leakcheck:
