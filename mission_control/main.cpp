@@ -21,8 +21,9 @@ void builder_test();
 
 int main()
 {
-    observer_test();
-    storage_test();
+    // observer_test();
+    // storage_test();
+    builder_test();
     return 0;
 }
 
@@ -139,6 +140,13 @@ void storage_test()
 
 void builder_test() {
     // Rocket::FALCON9 ------ Payload::STARLINK
+    ConcreteBuilder * CB = new ConcreteBuilder(Rocket::FALCON9, Payload::STARLINK);
+    CB->setFirstStageBoosters();
+    CB->setPayload(10);
+    Rocket * R = CB->buildRocket();
+    R->getPayload()->printPayload();
+    delete CB;
+    delete R;
 }
 
 /*
