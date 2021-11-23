@@ -64,7 +64,8 @@ Propulsion* Booster::clone() {
 	// for (auto it = this->_children.begin(); it < this->_children.end(); it++) {
 	// 	if(*it) clone->add((*it)->clone());
 	// }
-	// return clone; 
+	// return clone;
+	return nullptr;
 }
 
 Booster::~Booster() {
