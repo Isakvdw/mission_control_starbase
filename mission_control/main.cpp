@@ -158,6 +158,8 @@ void observer_test()
 
 void builder_test() {
     // Rocket::FALCON9 ------ Payload::STARLINK
+    cout<<"Builder Proof"<<endl;
+    cout<<"================================="<<endl;
     ConcreteBuilder * CB = new ConcreteBuilder(Rocket::FALCON9, Payload::STARLINK);
     CB->setFirstStageBoosters();
     CB->setPayload(10);
@@ -165,6 +167,7 @@ void builder_test() {
     R->getPayload()->printPayload();
     delete CB;
     delete R;
+    cout<<"================================="<<endl;
 }
 
 /*
