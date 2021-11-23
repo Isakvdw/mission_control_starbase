@@ -11,12 +11,16 @@ using namespace std;
 #include "../Propulsion/Engine.h"
 #include "../Propulsion/FalconHeavy.h"
 #include "../Propulsion/Falcon.h"
+#include "../Payload/DragonCrew.h"
+#include "../Payload/Dragon.h"
+#include "../Payload/Starlink.h"
 
 /**
  * @brief Implements @p Builder, constructs Rockets according to a structure
  * @details This class implements the interface of the @p Builder class, it constructs
  * 	FalconHeavy and Falcon 9 rockets, the structure followed is as follows:
  *  SecondStage->(engine,[firstStages[Engines]])
+ * @note - Uses the @p PayloadType @p enum @p from 
  */
 class ConcreteBuilder: public Builder 
 {

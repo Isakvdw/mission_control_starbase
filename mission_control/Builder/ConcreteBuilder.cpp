@@ -46,8 +46,41 @@ void ConcreteBuilder::setFirstStageBoosters() {
 
 void ConcreteBuilder::setPayload(string payloadDescription) {
 	if (_payloadType != Payload::CARGO) throw string("IncorrectPayloadType"); 
-	
+	if (_constructionRocket->getPayload()) { // if payload already set
+		delete _constructionRocket->getPayload();
+	}
+	Dragon *payload = new Dragon();
+	payload->setPayloadDescription(payloadDescription);
+	_constructionRocket->setPayload(payload);
 }
+
+void ConcreteBuilder::setPayload(vector<string> astronauts, vector<string> ranks) {
+	if (_payloadType != Payload::CREW) throw string("IncorrectPayloadType"); 
+	if (_constructionRocket->getPayload()) { // if payload is already set
+		delete _constructionRocket->getPayload();
+	}	
+	DragonCrew* crew = new DragonCrew();
+	int bound = (astronauts.size() > ranks.size()) ? ranks.size() : astronauts.size(); // get smallest vector
+	for (int i = 0; i < bound; i++) {
+		crew->insertCrew(astronauts[i], astronauts[i]); // insert crew members
+	}
+	_constructionRocket->setPayload(crew);
+}
+
+void ConcreteBuilder::setPayload(int numSatellites) {
+	if (_payloadType != Payload::STARLINK) throw string("IncorrectPayloadType"); 
+	if (_constructionRocket->getPayload()) { // if payload is already set
+		delete _constructionRocket->getPayload();
+	}
+	Starlink* link = new Starlink();
+	SatelliteFactory factory;
+	for (int i = 0; i < numSatellites; i++) {
+		link->addSat(factory.createComponent());
+	}
+	_constructionRocket->setPayload(link);
+}
+
+
 
 Rocket* ConcreteBuilder::buildRocket() {
  	Rocket* rocket = _constructionRocket;

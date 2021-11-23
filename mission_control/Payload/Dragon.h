@@ -14,6 +14,7 @@ class Dragon: public Payload
 		Dragon();
 		string getPayloadDescription();
 		Payload* clone();
+		void setPayloadDescription(string aDescription);
 	public: 
 		void printPayload();
 };
