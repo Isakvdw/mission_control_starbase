@@ -12,9 +12,24 @@ class Aggregate
 {
 public:
 	// Caretaker *caretaker;
-	RocketMemento *rocketMemento;
+	// RocketMemento *rocketMemento;
+
+	/**
+	 * @brief Add a RocketMemento to the vector
+	 * @param[in] aR pointer to a RocketMemento object
+	 */
 	virtual void add(RocketMemento *aR) = 0;
+
+	/**
+	 * @brief Remove a RocketMemento from the vector
+	 * @param[in] aR pointer to a RocketMemento object
+	 */
 	virtual void remove(RocketMemento *aR) = 0;
+
+	/**
+	 * @brief Create an iterator
+	 * @return newly created iterator
+	 */
 	virtual Iterator *createIterator() = 0;
 };
 
