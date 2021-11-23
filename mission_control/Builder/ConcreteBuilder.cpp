@@ -19,6 +19,7 @@ void ConcreteBuilder::setSecondStage() {
 	}
 	if (!_currSecondStage) {
 		_currSecondStage = new SecondStage();
+		_currSecondStage->setBoosterId(0);
 		_currSecondStage->add(new Engine("merlin-vacuum engine"));
 		_constructionRocket->setPropulsion(_currSecondStage);
 	}
@@ -30,6 +31,7 @@ void ConcreteBuilder::setFirstStageBoosters() {
 	if (_numFirstStage != 0) return;
 	if (_rocketType == Rocket::FALCON9) {
 		booster = new Falcon(); 					// only one booster
+		booster->setBoosterId(0);
 		for (int i = 0; i < 9; i++) { 				// 9 engines
 			booster->add(_seaLevelMerlin.clone()); 	// add engines
 		}
@@ -38,6 +40,7 @@ void ConcreteBuilder::setFirstStageBoosters() {
 	} else {
 		for (int i = 0; i < 3; i++) {				// 3 boosters
 			booster = new FalconHeavy(); 			// falcon heavy booster
+			booster->setBoosterId(i);
 			for (int i = 0; i < 9; i++) {			// 9 engines
 				booster->add(_seaLevelMerlin.clone()); // add engine
 			}
