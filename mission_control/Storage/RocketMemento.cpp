@@ -1,7 +1,7 @@
 #include "RocketMemento.h"
 
 /* testing */
-RocketMemento::RocketMemento(Propulsion* _prop, Payload* _payload, State* _state, RocketType _RocketType) {
+RocketMemento::RocketMemento(Propulsion* _prop, Payload* _payload, State* _state, Rocket::RocketType _RocketType) {
   _propulsion_store = _prop->clone();
   _payload_store = _payload->clone();
   _state_store = _state;
@@ -20,7 +20,7 @@ State* RocketMemento::getState() {
   return _state_store;
 }
 
-RocketType RocketMemento::getType() {
+Rocket::RocketType RocketMemento::getType() {
   return _RocketType_store;
 }
 

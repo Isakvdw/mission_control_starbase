@@ -45,7 +45,7 @@ Rocket::~Rocket() {
 	// delete _state;
 }
 RocketMemento* Rocket::Save() {
-	return new RocketMemento(_propulsion, _payload, _state);
+	return new RocketMemento(_propulsion, _payload, _state, _rocketType);
 }
 
 void Rocket::Restore(RocketMemento* aRockMem) {
