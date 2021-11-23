@@ -5,7 +5,7 @@ using namespace std;
 #ifndef __RocketAggregate_h__
 #define __RocketAggregate_h__
 
-// #include "RocketIterator.h"
+#include "RocketIterator.h"
 #include "Aggregate.h"
 
 class RocketAggregate : public Aggregate

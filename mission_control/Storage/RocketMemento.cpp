@@ -22,5 +22,5 @@ State* RocketMemento::getState() {
 RocketMemento::~RocketMemento() {
   delete _propulsion_store;
   delete _payload_store;
-  delete _state_store;
+  // delete _state_store;
 }
