@@ -85,6 +85,13 @@ class Rocket
 
 	public: void Restore(RocketMemento* aRockMem);
 
+	/**
+	 * @brief This function launches the rocket
+	 * @details Launches the rocket, adjusting the values of the boosters fuel levels accordingly
+	 * and also notifying observers
+	 */
+	public: void launchRocket();
+
 };
 
 #include "State/State.h"
