@@ -6,6 +6,7 @@ using namespace std;
 
 #include "Rocket.h"
 #include "Builder/Builder.h"
+#include "State/ActiveLaunchS.h"
 
 class MissionControlStarbase
 {

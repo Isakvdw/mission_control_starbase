@@ -27,6 +27,12 @@ class Payload
 	public: virtual void printPayload() = 0;
 
 	public: virtual Payload* clone()=0;
+
+	/**
+	 * @brief Launches payload
+	 * @details See child classes for implementation
+	 */
+	public: virtual void launchPayload()=0;
 };
 
 #endif

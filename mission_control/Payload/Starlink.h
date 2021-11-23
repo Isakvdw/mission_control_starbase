@@ -21,6 +21,12 @@ class Starlink: public Payload
 		void addSat(SatelliteLauncher* Sat);
 		string getPayloadDescription();
 		void printPayload();
+
+		/**
+		 * @brief Launches the starlink payload
+		 * @details This will deploy all starlink satellites
+		 */
+		void launchPayload();
 };
 
 #endif

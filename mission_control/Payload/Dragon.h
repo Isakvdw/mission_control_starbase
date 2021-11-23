@@ -17,6 +17,11 @@ class Dragon: public Payload
 		void setPayloadDescription(string aDescription);
 	public: 
 		void printPayload();
+		/**
+		 * @brief Launches the payload
+		 * 
+		 */
+		void launchPayload();
 };
 
 #endif

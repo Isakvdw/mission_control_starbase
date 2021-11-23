@@ -72,7 +72,7 @@ void ConcreteBuilder::setPayload(vector<string> astronauts, vector<string> ranks
 	DragonCrew* crew = new DragonCrew();
 	int bound = (astronauts.size() > ranks.size()) ? ranks.size() : astronauts.size(); // get smallest vector
 	for (int i = 0; i < bound; i++) {
-		crew->insertCrew(astronauts[i], astronauts[i]); // insert crew members
+		crew->insertCrew(astronauts[i], ranks[i]); // insert crew members
 	}
 	_constructionRocket->setPayload(crew);
 }

@@ -20,6 +20,7 @@ class DragonCrew: public Payload
 	public: 
 		void printPayload();
 		Payload* clone();
+		void launchPayload();
 };
 
 #endif

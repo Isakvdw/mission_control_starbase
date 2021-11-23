@@ -40,6 +40,7 @@ void SatelliteLauncher::handleRequest() {
 	}
 	else
 	{
+		
 		this->_successor->handleRequest();
 		delete this->_successor;
 		this->_successor = NULL;

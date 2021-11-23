@@ -12,6 +12,7 @@ class Satellite: public SatelliteLauncher
 		Satellite();
 		Satellite(const Satellite& obj);
 		Satellite* clone();
+		void satBoot(int v);
 };
 
 #endif

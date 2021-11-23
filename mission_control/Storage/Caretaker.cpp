@@ -10,25 +10,27 @@ Iterator* Caretaker::createIterator() {
 void Caretaker::batchStore(RocketAggregate* aBatch) {
 	delete _mementos;
 	_mementos = aBatch;
+	_intIter = _mementos->createIterator();
 }
 
 void Caretaker::batchRun() {
 	_intIter->start();
 	RocketMemento* curr = _intIter->getCurr();
 	Rocket* temp = new Rocket();
-
+	cout << "+++++BATCH RUN+++++" << endl;
 	while (!_intIter->isEnd()) {
-		
+		cout << "--------------------------" << endl;
 		temp->setPayload(curr->getPayload());
 		temp->setPropulsion(curr->getPropulsion());
 		temp->setState(curr->getState());
 		temp->setRocketType(curr->getType());
 		MCS->launch(temp);
-		
-		_intIter->next();
+		curr = _intIter->next();
+		cout << "--------------------------" << endl;
+
 	}
 	delete temp;	
-
+	cout << "+++++++++++++++++++++++" << endl;
 }
 
 void Caretaker::storeRocket(RocketMemento* rockMem) {

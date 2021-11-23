@@ -103,5 +103,6 @@ Rocket* MissionControlStarbase::construct(Builder* aBuilder) {
  * @param R 
  */
 void MissionControlStarbase::launch(Rocket * R) {
-	throw "Not implemented yet";
+	R->setState(new ActiveLaunchS());
+	R->getState()->handle(R);
 }

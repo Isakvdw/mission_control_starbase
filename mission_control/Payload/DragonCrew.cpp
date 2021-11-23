@@ -54,6 +54,15 @@ void DragonCrew::insertCrew(string Name, string Rank) {
 	return;
 }
 
+void DragonCrew::launchPayload() {
+	cout << "Launching Astronauts: " << endl;
+	cout << getPayloadDescription() << endl;
+	for (int i = 0; i < CREWCAP; i++) {
+		crew[i] = "";
+	}
+	cout << "Astronauts Launched" << endl;
+}
+
 /**
  * @brief Gets the description of the DragonCrew payload as a string.
  * @details Builds a description string from the given info.

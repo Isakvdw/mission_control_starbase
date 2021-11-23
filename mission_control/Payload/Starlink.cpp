@@ -36,6 +36,12 @@ Starlink::~Starlink() {
 	}
 }
 
+void Starlink::launchPayload() {
+	cout << "Launching: " << endl << getPayloadDescription();
+	cout << endl;
+	LaunchAllSatellites();
+}
+
 /**
  * @brief Starlink clones itself
  * @details Starlink clones itself and makes a brand new 

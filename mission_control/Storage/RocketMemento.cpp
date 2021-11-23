@@ -4,7 +4,7 @@
 RocketMemento::RocketMemento(Propulsion* _prop, Payload* _payload, State* _state, Rocket::RocketType _RocketType) {
   _propulsion_store = _prop->clone();
   _payload_store = _payload->clone();
-  _state_store = _state;
+  _state_store = _state->clone();
   _RocketType_store = _RocketType;
 }
   

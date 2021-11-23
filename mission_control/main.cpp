@@ -11,6 +11,7 @@
 #include "Storage/RocketAggregate.h"
 #include "Storage/RocketIterator.h"
 #include "Storage/RocketMemento.h"
+#include "Storage/Caretaker.h"
 
 using namespace std;
 
@@ -19,13 +20,48 @@ void observer_test();
 void builder_test();
 void booster_clone_test();
 
+void simulation();
+
 int main()
 {
-    observer_test();
+    simulation();
+    // observer_test();
     // storage_test();
-    builder_test();
-    booster_clone_test();
+    // builder_test();
+    // booster_clone_test();
     return 0;
+}
+
+void simulation() {
+    ConcreteBuilder builder(Rocket::FALCONHEAVY, Payload::STARLINK);
+    builder.setFirstStageBoosters();
+    builder.setPayload(50);
+    Rocket* r = builder.buildRocket();
+    
+    FuelObserver* observer = new FuelObserver();
+    FuelObserver* firstStageO = new FuelObserver();
+    
+    r->getSecondStage()->attach(observer);
+    observer->setSubjectBooster(r->getSecondStage());
+    
+    r->getFirstStage(1)->attach(firstStageO);
+    firstStageO->setSubjectBooster(r->getFirstStage(1));
+
+    r->getState()->changeState(r);
+    r->getState()->handle(r);
+    r->getState()->changeState(r);
+    r->getState()->handle(r);
+
+    Caretaker* caretaker = new Caretaker();
+    RocketAggregate* aggr = new RocketAggregate();
+    aggr->add(r->Save());
+    aggr->add(r->Save());
+    aggr->add(r->Save());
+    caretaker->batchStore(aggr);
+    caretaker->batchRun();
+
+    r->getState()->changeState(r); // Go to real launch
+    r->getState()->handle(r);
 }
 
 void booster_clone_test() {
@@ -119,47 +155,6 @@ void observer_test()
 
   cout << "==============OBSERVER TEST DONE==============" << endl;
 }
-
-// void storage_test() {
-//   cout << "================STORAGE TEST================" << endl;
-
-//   // create aggregate
-//   RocketAggregate *rocket_aggregate = new RocketAggregate;
-
-//   // create a memento to remove later
-//   RocketMemento *remove_memento = new RocketMemento("stationary");
-
-//   // populate aggregate vector
-//   rocket_aggregate->add(new RocketMemento("launched"));
-//   rocket_aggregate->add(new RocketMemento("building"));
-//   rocket_aggregate->add(new RocketMemento("launching"));
-//   rocket_aggregate->add(remove_memento);
-//   rocket_aggregate->add(new RocketMemento("low fuel"));
-//   rocket_aggregate->add(new RocketMemento("building"));
-
-//   // create iterator
-//   Iterator *rocket_iterator = rocket_aggregate->createIterator();
-
-//   // print aggregate vector using iterator
-//   for (; !rocket_iterator->end(); rocket_iterator->next()) {
-//     cout << rocket_iterator->getCurr()->getRocketState() << endl;
-//   }
-
-//   // remove remove_memento from aggregate vector
-//   rocket_aggregate->remove(remove_memento);
-
-//   // reset iterator to first element
-//   rocket_iterator->start();
-
-//   cout << "==============" << endl;
-
-//   // print aggregate vector using iterator
-//   for (; !rocket_iterator->end(); rocket_iterator->next()) {
-//     cout << rocket_iterator->getCurr()->getRocketState() << endl;
-//   }
-
-//   cout << "==============STORAGE TEST DONE==============" << endl;
-// }
 
 void builder_test() {
     // Rocket::FALCON9 ------ Payload::STARLINK

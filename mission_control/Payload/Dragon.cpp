@@ -47,6 +47,12 @@ void Dragon::printPayload() {
 	cout<<getPayloadDescription()<<endl;
 }
 
+void Dragon::launchPayload() {
+	cout << "Launching: " << getPayloadDescription() << endl;
+	setPayloadDescription("");
+	cout << "Payload Launched" << endl;
+}
+
 /**
  * @brief clone function for Dragon
  * @return a pointer to payload

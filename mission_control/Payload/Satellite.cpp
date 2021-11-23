@@ -1,4 +1,5 @@
 #include <exception>
+#include <iostream>
 using namespace std;
 
 #include "Satellite.h"
@@ -29,5 +30,9 @@ Satellite::Satellite(const Satellite& obj) {
  */
 Satellite* Satellite::clone() {
 	return new Satellite(*this);
+}
+
+void Satellite::satBoot(int v) {
+	cout << "Satellite: " << v << " Online" << endl;
 }
 
