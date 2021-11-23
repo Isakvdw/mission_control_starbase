@@ -11,6 +11,12 @@
 class State;
 class RocketMemento;
 
+
+enum RocketType {
+  FALCON9,     ///< Specifies that the rocket is a Falcon-9 Rocket
+  FALCONHEAVY  ///< Specifies that the rocket is a Falcon Heavy Rocket
+};
+
 class Rocket
 {
 	private: Propulsion* _propulsion;
@@ -25,10 +31,6 @@ class Rocket
 		 * 		@p FALCON9 Rockets will have 1 first stage boosters
 		 * 		@p FALCONHEAVY Rockets will have 3 first stage boosters	
 		 */
-		enum RocketType {
-				FALCON9,     ///< Specifies that the rocket is a Falcon-9 Rocket
-				FALCONHEAVY  ///< Specifies that the rocket is a Falcon Heavy Rocket
-			};
 
 	private: RocketType _rocketType;
 	

@@ -7,6 +7,7 @@ using namespace std;
 // #include "RocketAggregate.h"
 #include "RocketIterator.h"
 // #include "RocketMemento.h"
+#include "../MissionControlStarbase.h"
 
 class RocketMemento;
 
@@ -14,6 +15,7 @@ class Caretaker {
  private:
   RocketAggregate *_mementos;
   Iterator *_intIter;
+  MissionControlStarbase *MCS;
  public:  
   Caretaker();
   ~Caretaker();
