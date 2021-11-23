@@ -14,5 +14,5 @@ Propulsion* SecondStage::clone() {
 
 string SecondStage::getName()
 {
-	return "Second Stage - " + to_string(this->getBoosterId());
+	return "Second Stage-" + to_string(this->getBoosterId());
 }

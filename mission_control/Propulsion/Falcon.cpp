@@ -10,7 +10,7 @@ void Falcon::operation()
 
 string Falcon::getName()
 {
-	return "Falcon - " + to_string(this->getBoosterId());
+	return "Falcon-" + to_string(this->getBoosterId());
 }
 
 Propulsion* Falcon::clone() {

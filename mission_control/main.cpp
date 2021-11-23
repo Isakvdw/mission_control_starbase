@@ -21,9 +21,9 @@ void builder_test();
 
 int main()
 {
-    // observer_test();
+    observer_test();
     // storage_test();
-    builder_test();
+    // builder_test();
     return 0;
 }
 
@@ -38,12 +38,15 @@ void observer_test()
 
     fHeavy->setLOXfuelLevel(100);
     fHeavy->setRP1fuelLevel(100);
+    fHeavy->setBoosterId(1);
 
     f->setLOXfuelLevel(100);
     f->setRP1fuelLevel(100);
+    f->setBoosterId(3);
 
     sStage->setLOXfuelLevel(100);
     sStage->setRP1fuelLevel(100);
+    sStage->setBoosterId(2);
 
     fHeavy->attach(fObs1);
     fObs1->setSubjectBooster(fHeavy);
