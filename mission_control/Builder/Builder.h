@@ -62,7 +62,7 @@ class Builder {
     virtual void setPayload(int numSatellites) = 0;
     
     /// see child class for details
-    virtual void setPayload(vector<string> astronauts) = 0;
+    virtual void setPayload(vector<string> astronauts, vector<string> ranks) = 0;
 
     /**
      * @brief Setter for the payload type of the rocket being built
