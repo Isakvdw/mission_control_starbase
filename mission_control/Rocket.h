@@ -16,6 +16,7 @@ class Rocket
 	private: Payload* _payload;
 	private: State* _state;
 
+
 	public:
 		/**
 		 * @brief Specifies the type of 
@@ -28,18 +29,52 @@ class Rocket
 				FALCONHEAVY  ///< Specifies that the rocket is a Falcon Heavy Rocket
 			};
 
+	private: RocketType _rocketType;
+	
 	Rocket();
 
+	public:
+	/**
+	 * @brief Get the Second Stage object
+	 * @details Returns a pointer to the second stage of the rocket
+	 * @return SecondStage* 
+	 */
+	SecondStage* getSecondStage();
+
+	public:
+	/**
+	 * @brief Get the First Stage object at a certain index
+	 * @details Returns the index'th first stage booster 
+	 * @param index 
+	 * @return Booster* 
+	 */
+	Booster* getFirstStage(int index);
+
+	public: RocketType getRocketType();
+
+	/**
+	 * @brief Sets the rocket type
+	 * @note - This should not be changed after rocket has been created
+	 * @param[in] type The type of the rocket 
+	 */
+	public: void setRocketType(RocketType type);
+
+	/// Returns the propulsion object of the rocket
 	public: Propulsion* getPropulsion();
 
+	/// sets the propulsion object of the rocket
 	public: void setPropulsion(Propulsion* aPropulsion);
 
+	/// gets the rocket's payload
 	public: Payload* getPayload();
 
+	/// sets the rocket's payload
 	public: void setPayload(Payload* aPayload);
 
+	/// gets the state object of the rocket
 	public: State* getState();
 
+	/// sets the state object of the rocket
 	public: void setState(State* aState);
 
 	public: virtual ~Rocket();
