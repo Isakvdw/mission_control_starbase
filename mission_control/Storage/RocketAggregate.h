@@ -15,6 +15,11 @@ private:
 	vector<RocketMemento *> _mementos;
 
 public:
+    /**
+	 * @brief Destruct the RocketAggregate
+	 */
+    ~RocketAggregate();
+    
 	/**
 	 * @brief Add a RocketMemento to the vector
 	 * @param[in] aR pointer to a RocketMemento object

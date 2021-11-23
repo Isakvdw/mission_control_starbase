@@ -4,9 +4,11 @@
 
 #include "Propulsion/Propulsion.h"
 #include "Payload/Payload.h"
+#include "Storage/StorageG.h"
 // #include "State/State.h"
 
 class State;
+class RocketMemento;
 
 class Rocket
 {
@@ -41,6 +43,13 @@ class Rocket
 	public: void setState(State* aState);
 
 	public: virtual ~Rocket();
+
+	public: RocketMemento* Save();
+
+	public: void Restore(RocketMemento* aRockMem);
+
 };
+
+#include "State/State.h"
 
 #endif
