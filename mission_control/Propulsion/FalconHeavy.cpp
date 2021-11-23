@@ -3,7 +3,12 @@ using namespace std;
 
 #include "FalconHeavy.h"
 
-void FalconHeavy::operation() {
+void FalconHeavy::operation()
+{
 	throw "Not yet implemented";
 }
 
+string FalconHeavy::getName()
+{
+	return "Falcon Heavy - " + to_string(this->getBoosterId());
+}

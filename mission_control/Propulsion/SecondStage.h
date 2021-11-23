@@ -6,10 +6,14 @@ using namespace std;
 
 #include "Booster.h"
 
-class SecondStage: public Booster
+class SecondStage : public Booster
 {
 
-	public: void operation();
+public:
+	void operation();
+
+public:
+	string getName() override;
 };
 
 #endif

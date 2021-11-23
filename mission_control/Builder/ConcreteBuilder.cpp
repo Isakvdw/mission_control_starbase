@@ -27,21 +27,26 @@ void ConcreteBuilder::setFirstStageBoosters() {
 	Booster* booster;
 	if (_numFirstStage != 0) return;
 	if (_rocketType == Rocket::FALCON9) {
-		booster = new Falcon(); 
-		for (int i = 0; i < 9; i++) {
-			booster->add(_seaLevelMerlin.clone());
+		booster = new Falcon(); 					// only one booster
+		for (int i = 0; i < 9; i++) { 				// 9 engines
+			booster->add(_seaLevelMerlin.clone()); 	// add engines
 		}
-		_currSecondStage->add(booster);
-		_numFirstStage = 1;
+		_currSecondStage->add(booster); 			// attach booster to second stage
+		_numFirstStage = 1; 						// specify only one booster
 	} else {
-		for (int i = 0; i < 3; i++) {
-			booster = new FalconHeavy(); 
-			for (int i = 0; i < 9; i++) {
-				booster->add(_seaLevelMerlin.clone());
+		for (int i = 0; i < 3; i++) {				// 3 boosters
+			booster = new FalconHeavy(); 			// falcon heavy booster
+			for (int i = 0; i < 9; i++) {			// 9 engines
+				booster->add(_seaLevelMerlin.clone()); // add engine
 			}
 		}
-		_numFirstStage = 3;
+		_numFirstStage = 3;							//specify 3 boosters
 	}
+}
+
+void ConcreteBuilder::setPayload(string payloadDescription) {
+	if (_payloadType != Payload::CARGO) throw string("IncorrectPayloadType"); 
+	
 }
 
 Rocket* ConcreteBuilder::buildRocket() {
