@@ -13,6 +13,8 @@ class MissionControlStarbase
 	private: Builder* _rocketBuilder;
 
 	public: Rocket* construct(Builder* aBuilder);
+
+	public: void launch(Rocket* R);
 };
 
 #endif

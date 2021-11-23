@@ -4,6 +4,15 @@ using namespace std;
 
 #include "MissionControlStarbase.h"
 
+/**
+ * @brief Construct a rocket
+ * @details Use a passed builder to build
+ * 			and put a rocket together for use.
+ * 			Also allow user to change builder
+ * 			parameters.
+ * @param aBuilder 
+ * @return Rocket* 
+ */
 Rocket* MissionControlStarbase::construct(Builder* aBuilder) {
 	string input1="";
 	while(input1 != "1" && input1 != "2"){
@@ -86,3 +95,12 @@ Rocket* MissionControlStarbase::construct(Builder* aBuilder) {
 	return aBuilder->buildRocket();
 }
 
+/**
+ * @brief Launch Rocket
+ * @details Use rocket's states to go through
+ * 			it preparations and then launch.
+ * @param R 
+ */
+void MissionControlStarbase::launch(Rocket * R) {
+	throw "Not implemented yet";
+}
