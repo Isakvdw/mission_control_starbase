@@ -8,6 +8,8 @@ ConcreteBuilder::ConcreteBuilder(Rocket::RocketType aRocketType, Payload::Payloa
 	_numFirstStage = 0;
 	_currSecondStage = nullptr;
 	_seaLevelMerlin.setType("sea-level merlin");
+	_rocketType = aRocketType;
+	_payloadType = aPayloadType;
 	
 }
 
