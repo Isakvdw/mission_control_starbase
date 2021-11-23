@@ -21,7 +21,7 @@ void FuelObserver::update() {
 
 void FuelObserver::assessFuel() {
 	cout << "--------------------------------------------------" << endl;
-	cout << _observerName << ": (LOX, RP1) fuel levels at (" 
+	cout << _concreteBooster->getName() << ": (LOX, RP1) fuel levels at (" 
 		<< _lOXfuelState << "," << _rP1fuelState << ")%" << endl;
 	string lOXstate, rP1state;
 	// Get descriptions for fuel levels

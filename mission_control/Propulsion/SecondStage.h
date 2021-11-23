@@ -18,8 +18,6 @@ public:
 public:
 	string getName() override;
 
-public:
-	~SecondStage() override;
 };
 
 #endif

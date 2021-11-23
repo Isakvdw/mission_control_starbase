@@ -5,6 +5,8 @@ out/*.o: *.cpp */*.cpp
 run:
 	make
 	./main.out
+r:
+	./main.out
 
 runonce: run clean
 

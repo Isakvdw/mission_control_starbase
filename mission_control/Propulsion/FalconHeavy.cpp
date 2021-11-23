@@ -14,5 +14,5 @@ void FalconHeavy::operation()
 
 string FalconHeavy::getName()
 {
-	return "Falcon Heavy - " + to_string(this->getBoosterId());
+	return "Falcon Heavy-" + to_string(this->getBoosterId());
 }
