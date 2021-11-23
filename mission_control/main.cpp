@@ -18,13 +18,36 @@ using namespace std;
 void observer_test();
 void storage_test();
 void builder_test();
+void booster_clone_test();
 
 int main()
 {
-    observer_test();
+    // observer_test();
     // storage_test();
     // builder_test();
+    booster_clone_test();
     return 0;
+}
+
+void booster_clone_test() {
+        // Rocket::FALCON9 ------ Payload::STARLINK
+    ConcreteBuilder * CB = new ConcreteBuilder(Rocket::FALCONHEAVY, Payload::STARLINK);
+    CB->setFirstStageBoosters();
+    CB->setPayload(10);
+    Rocket * R = CB->buildRocket();
+    ((Booster*) R->getPropulsion())->getChildBooster(1)->setLOXfuelLevel(100);
+    Booster* prop = (Booster*) R->getPropulsion()->clone();
+    cout << prop->getBoosterId() << endl;
+    cout << prop->getChildBooster(0)->getBoosterId() << endl; 
+    cout << prop->getChildBooster(1)->getBoosterId() << endl; 
+    cout << prop->getChildBooster(1)->getLOXfuelLevel() << endl; 
+    cout << prop->getChildBooster(2)->getBoosterId() << endl; 
+ 
+
+    
+    // R->getPayload()->printPayload();
+    // delete CB;
+    // delete R;
 }
 
 void observer_test()

@@ -41,9 +41,10 @@ void ConcreteBuilder::setFirstStageBoosters() {
 		for (int i = 0; i < 3; i++) {				// 3 boosters
 			booster = new FalconHeavy(); 			// falcon heavy booster
 			booster->setBoosterId(i);
-			for (int i = 0; i < 9; i++) {			// 9 engines
+			for (int j = 0; j < 9; j++) {			// 9 engines
 				booster->add(_seaLevelMerlin.clone()); // add engine
 			}
+			_currSecondStage->add(booster); 			// attach booster to second stage
 		}
 		_numFirstStage = 3;							//specify 3 boosters
 	}

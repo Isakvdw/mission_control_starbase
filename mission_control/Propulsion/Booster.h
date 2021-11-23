@@ -16,15 +16,24 @@ class Booster : public Propulsion {
    protected:
     vector<Propulsion *> _children;
     /// LOX Fuel level as a percentage
-   private:
+   protected:
     int _lOXfuelLevel;
     /// RP1 Fuel level as a percentage
-   private:
+   protected:
     int _rP1fuelLevel;
 
     /// booster ID as int
    private:
-    static int booster_id;
+    int booster_id;
+
+   public:
+    /**
+     * @details See child classes for more implementation
+     * This method returns null
+     * @param index The index of the child booster to obtain
+     * @return Booster* 
+     */
+    virtual Booster* getChildBooster(int index);
 
     /**
 	 * @brief adds a propulsion object to the composite structure

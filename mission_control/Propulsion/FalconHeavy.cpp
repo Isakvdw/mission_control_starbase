@@ -4,7 +4,15 @@ using namespace std;
 #include "FalconHeavy.h"
 
 Propulsion* FalconHeavy::clone() {
-	return Booster::clone();
+	FalconHeavy* clone =  new FalconHeavy(); // hmmm
+	clone->_lOXfuelLevel = this->_lOXfuelLevel;
+	clone->_rP1fuelLevel = this->_lOXfuelLevel;
+	clone->setBoosterId(this->getBoosterId());
+
+	for (auto it = this->_children.begin(); it < this->_children.end(); it++) {
+		if(*it) clone->add((*it)->clone());
+	}
+	return clone; 
 }
 
 void FalconHeavy::operation()

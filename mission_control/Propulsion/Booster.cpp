@@ -4,11 +4,8 @@ using namespace std;
 
 #include "Booster.h"
 
-int Booster::booster_id = 1;
-
 void Booster::add(Propulsion *aP)
 {
-	booster_id++;
 	_children.push_back(aP);
 }
 
@@ -18,7 +15,6 @@ void Booster::remove(Propulsion *aP)
 	{
 		if (*it == aP)
 		{
-			booster_id--;
 			_children.erase(it);
 			return;
 		}
@@ -66,15 +62,22 @@ string Booster::getName()
 }
 
 Propulsion* Booster::clone() {
-	Booster* clone = (Booster*) this->clone(); // hmmm
-	for (auto it = this->_children.begin(); it < this->_children.end(); it++) {
-		if(*it) clone->add((*it)->clone());
-	}
-	return clone; 
+	// Booster* clone = (Booster*) this->clone(); // hmmm
+	// clone->_lOXfuelLevel = this->_lOXfuelLevel;
+	// clone->_rP1fuelLevel = this->_lOXfuelLevel;
+
+	// for (auto it = this->_children.begin(); it < this->_children.end(); it++) {
+	// 	if(*it) clone->add((*it)->clone());
+	// }
+	// return clone; 
 }
 
 Booster::~Booster() {
 	for (auto it = _children.begin(); it < _children.end(); it++) {
 		delete *it;
 	}
+}
+
+Booster* Booster::getChildBooster(int index) {
+	return nullptr;
 }
