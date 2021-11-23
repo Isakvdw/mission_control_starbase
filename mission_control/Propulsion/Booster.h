@@ -14,7 +14,7 @@ using namespace std;
 class Booster : public Propulsion
 {
 	/// Children in the composite structure
-private:
+protected:
 	vector<Propulsion *> _children;
 	/// LOX Fuel level as a percentage
 private:
@@ -97,8 +97,12 @@ public:
 public:
 	virtual void operation();
 
-	///Do nothing
 public:
+	/**
+	 * @brief Returns a clone of the entire tree structure
+	 * 
+	 * @return Propulsion*
+	 */
 	Propulsion *clone();
 };
 

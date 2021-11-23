@@ -50,12 +50,6 @@ void Booster::operation()
 	throw "Not yet implemented";
 }
 
-Propulsion *Booster::clone()
-{
-	//DO NOTHING
-	return NULL;
-}
-
 int Booster::getBoosterId()
 {
 	return this->booster_id;
@@ -69,4 +63,12 @@ void Booster::setBoosterId(int id)
 string Booster::getName()
 {
 	return "";
+}
+
+Propulsion* Booster::clone() {
+	Booster* clone = (Booster*) this->clone(); // hmmm
+	for (auto it = this->_children.begin(); it < this->_children.end(); it++) {
+		if(*it) clone->add((*it)->clone());
+	}
+	return clone; 
 }
