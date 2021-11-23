@@ -22,19 +22,23 @@ using namespace std;
  *  SecondStage->(engine,[firstStages[Engines]])
  * @note - Uses the @p PayloadType @p enum @p from 
  */
-class ConcreteBuilder: public Builder 
+class ConcreteBuilder : public Builder
 {
 	/// The rocket being worked on
-	private: Rocket *_constructionRocket;
+private:
+	Rocket *_constructionRocket;
 
 	/// The current second stage of the rocket
-	private: Booster *_currSecondStage;
+private:
+	Booster *_currSecondStage;
 
 	/// A integer value that counts the number of first stage boosters that have been added
-	private: int _numFirstStage;
+private:
+	int _numFirstStage;
 
 	/// An engine that is used for cloning
-	private: Engine _seaLevelMerlin;
+private:
+	Engine _seaLevelMerlin;
 
 	/**
 	 * @brief A parameterized constructor
@@ -52,14 +56,16 @@ class ConcreteBuilder: public Builder
 	 * @details This method returns a pointer to the rocket that has 
 	 * been constructed.
 	 */
-	public: Rocket* buildRocket() override;
+public:
+	Rocket *buildRocket() override;
 
 	/**
 	 * @brief Sets the second stage of the rocket
 	 * @details This function will add a second stage to the rocket,
 	 * it will also automatically add an engine to the rocket
 	 */
-	public: void setSecondStage() override;
+public:
+	void setSecondStage() override;
 
 	/**
 	 * @brief Sets the payload when using @b CARGO payload type
@@ -67,17 +73,17 @@ class ConcreteBuilder: public Builder
 	 * @details Sets the payload for payload type CARGO, will automatically create payload an initialise with parameters
 	 * @note - This functions is only to be used for setting the payload when @p payLoadType is @b CARGO . If it is not this type, the function will throw a @p string
 	 */
-    virtual void setPayload(string payloadDescription) override;
-  
-    /**
+	virtual void setPayload(string payloadDescription) override;
+
+	/**
      * @brief Set the Payload object when using @b STARLINK payload type
      * @param[in] numSatellites The number of satellits to add to the chain of satellites (chain of responsibilty)
 	 * @details This function will create a starlink payload, for @b STARLINK payload type containing the number of satellites specified as a parameter
 	 * @note - Only to be used when payload type is @b STARLNK . If it is not this type the function will throw a @p string
      */
-    virtual void setPayload(int numSatellites) override;
-    
-    /**
+	virtual void setPayload(int numSatellites) override;
+
+	/**
      * @brief Set the Payload object when using @b CREW payload type
      * 
      * @param astronauts A vector of astronauts to add to the payload
@@ -86,14 +92,15 @@ class ConcreteBuilder: public Builder
 	 * astronaut array, but differences in length will be ignored
 	 * @note - Only to be used when payload type is @b CREW . If it is not this type the function will throw a @p string
      */
-    virtual void setPayload(vector<string> astronauts, vector<string> ranks) override;
+	virtual void setPayload(vector<string> astronauts, vector<string> ranks) override;
 
 	/**
 	 * @brief Adds a first stage to the Rocket
 	 * @details This method will add a first stage Booster to the rocket.
 	 * 	it will also automatically add engines to the rocket
 	 */
-	public: void setFirstStageBoosters() override;
+public:
+	void setFirstStageBoosters() override;
 };
 
 #endif
