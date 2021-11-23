@@ -2,8 +2,8 @@
 
 /* testing */
 RocketMemento::RocketMemento(Propulsion* _prop, Payload* _payload, State* _state) {
-  _propulsion_store = _prop;
-  _payload_store = _payload;
+  _propulsion_store = _prop->clone();
+  _payload_store = _payload->clone();
   _state_store = _state;
 }
   
@@ -22,5 +22,5 @@ State* RocketMemento::getState() {
 RocketMemento::~RocketMemento() {
   delete _propulsion_store;
   delete _payload_store;
-  // delete _state_store;
+  delete _state_store;
 }
