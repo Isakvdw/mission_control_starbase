@@ -53,7 +53,3 @@ void Rocket::Restore(RocketMemento* aRockMem) {
 	_payload = aRockMem->getPayload();
 	_state = aRockMem->getState();
 }
-
-void Rocket::launchRocket() {
-	
-}
