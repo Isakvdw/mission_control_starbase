@@ -44,7 +44,7 @@ class ConcreteBuilder: public Builder
 	 * @p false and @p numFirstStage to @p 0
 	 * It also creates a new rocket with no parts set
 	 */
-	public: ConcreteBuilder(Rocket::RocketType aRocketType, Payload::PayloadType aPayloadType);
+	public: ConcreteBuilder(Rocket::RocketType aRocketType, Payload::PayloadType aPayloadType = Payload::CARGO);
 
 	/**
 	 * @brief Returns the built rocket

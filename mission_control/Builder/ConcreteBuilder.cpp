@@ -45,7 +45,8 @@ void ConcreteBuilder::setFirstStageBoosters() {
 }
 
 void ConcreteBuilder::setPayload(string payloadDescription) {
-	if (_payloadType != Payload::CARGO) throw string("IncorrectPayloadType"); 
+	/// @todo see if should add
+	//if (_payloadType != Payload::CARGO) throw string("IncorrectPayloadType"); 
 	if (_constructionRocket->getPayload()) { // if payload already set
 		delete _constructionRocket->getPayload();
 	}
@@ -55,7 +56,8 @@ void ConcreteBuilder::setPayload(string payloadDescription) {
 }
 
 void ConcreteBuilder::setPayload(vector<string> astronauts, vector<string> ranks) {
-	if (_payloadType != Payload::CREW) throw string("IncorrectPayloadType"); 
+	/// @todo see if should add
+	//if (_payloadType != Payload::CREW) throw string("IncorrectPayloadType"); 
 	if (_constructionRocket->getPayload()) { // if payload is already set
 		delete _constructionRocket->getPayload();
 	}	
@@ -68,7 +70,8 @@ void ConcreteBuilder::setPayload(vector<string> astronauts, vector<string> ranks
 }
 
 void ConcreteBuilder::setPayload(int numSatellites) {
-	if (_payloadType != Payload::STARLINK) throw string("IncorrectPayloadType"); 
+	/// @todo see if should add
+	//if (_payloadType != Payload::STARLINK) throw string("IncorrectPayloadType"); 
 	if (_constructionRocket->getPayload()) { // if payload is already set
 		delete _constructionRocket->getPayload();
 	}
