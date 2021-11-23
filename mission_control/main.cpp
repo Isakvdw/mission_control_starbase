@@ -21,10 +21,45 @@ void booster_clone_test();
 
 int main()
 {
-    observer_test();
-    // storage_test();
+    cout<<"Payload proof"<<endl;
+    cout<<"================================="<<endl;
+    Dragon * D = new Dragon();
+    DragonCrew * DC = new DragonCrew();
+    SatelliteFactory * SF = new SatelliteFactory();
+    Starlink * SL = new Starlink();
+    D->setPayloadDescription("200 kgs of apples!");
+    D->printPayload();
+    DC->insertCrew("Robert Quint","Pilot");
+    DC->insertCrew("Rachel Salvester","Commander");
+    DC->insertCrew("Isaac Malan","Captian");
+    DC->insertCrew("Sarah Til","Pilot");
+    DC->insertCrew("Bob Whitney","Medic");
+    DC->printPayload();
+    SL->LaunchAllSatellites();
+    for(int x = 0; x < 50; x++)
+    {
+        SL->addSat(SF->createComponent());
+    }
+    SL->LaunchAllSatellites();
+    delete D;
+    delete DC;
+    delete SF;
+    delete SL;
+    cout<<"================================="<<endl;
+    // observer_test();
+    // // storage_test();
     builder_test();
-    booster_clone_test();
+    // booster_clone_test();
+    cout<<"Mission Control Proof"<<endl;
+    cout<<"================================="<<endl;
+    ConcreteBuilder * CB = new ConcreteBuilder(Rocket::FALCON9, Payload::STARLINK);
+    MissionControlStarbase * MCS = new MissionControlStarbase();
+    Rocket * R = MCS->construct(CB);
+    R->getPayload()->printPayload();
+    delete CB;
+    delete MCS;
+    delete R;
+    cout<<"================================="<<endl;
     return 0;
 }
 
@@ -163,6 +198,8 @@ void observer_test()
 
 void builder_test() {
     // Rocket::FALCON9 ------ Payload::STARLINK
+    cout<<"Builder Proof"<<endl;
+    cout<<"================================="<<endl;
     ConcreteBuilder * CB = new ConcreteBuilder(Rocket::FALCON9, Payload::STARLINK);
     CB->setFirstStageBoosters();
     CB->setPayload(10);
@@ -170,6 +207,7 @@ void builder_test() {
     R->getPayload()->printPayload();
     delete CB;
     delete R;
+    cout<<"================================="<<endl;
 }
 
 /*
