@@ -26,6 +26,8 @@ class Rocket
 				FALCONHEAVY  ///< Specifies that the rocket is a Falcon Heavy Rocket
 			};
 
+	Rocket();
+
 	public: Propulsion* getPropulsion();
 
 	public: void setPropulsion(Propulsion* aPropulsion);
