@@ -37,3 +37,4 @@ main
 # Visual paradigm
 *.vpp.bak*
 *.vpp.lck
+mission_control/.vscode/

@@ -5,7 +5,7 @@ using namespace std;
 #ifndef __RocketAggregate_h__
 #define __RocketAggregate_h__
 
-#include "RocketIterator.h"
+// #include "RocketIterator.h"
 #include "Aggregate.h"
 
 class RocketAggregate : public Aggregate
@@ -15,6 +15,11 @@ private:
 	vector<RocketMemento *> _mementos;
 
 public:
+    /**
+	 * @brief Destruct the RocketAggregate
+	 */
+    ~RocketAggregate();
+    
 	/**
 	 * @brief Add a RocketMemento to the vector
 	 * @param[in] aR pointer to a RocketMemento object

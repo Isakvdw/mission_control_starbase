@@ -41,15 +41,21 @@ public:
 	 * @brief Check if currently at last element
 	 * @return return true if at last element, else return false
 	 */
-	bool end();
+	bool isEnd();
 
 	/**
 	 * @brief Move to the first element
 	 * @return The first element
 	 */
 	RocketMemento *start();
-
-	/**
+	
+    /**
+	 * @brief Move to the last element
+	 * @return The last element
+	 */
+	RocketMemento *End();
+	
+    /**
 	 * @brief Returns the current element
 	 * @return element that is currently being pointed to
 	 */

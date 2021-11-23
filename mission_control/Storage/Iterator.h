@@ -5,6 +5,7 @@ using namespace std;
 #define __Iterator_h__
 
 #include "RocketMemento.h"
+class RocketMemento;
 
 class Iterator
 {
@@ -19,13 +20,19 @@ public:
 	 * @brief Check if currently at last element
 	 * @return return true if at last element, else return false
 	 */
-	virtual bool end() = 0;
+	virtual bool isEnd() = 0;
 
 	/**
 	 * @brief Move to the first element
 	 * @return The first element
 	 */
 	virtual RocketMemento *start() = 0;
+
+    /**
+	 * @brief Move to the last element
+	 * @return The last element
+	 */
+    virtual RocketMemento *End() = 0;
 
 	/**
 	 * @brief Returns the current element
