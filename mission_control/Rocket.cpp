@@ -31,3 +31,7 @@ Rocket::Rocket(){
 	_state=NULL;
 }
 
+Rocket::~Rocket() {
+	delete _propulsion;
+	delete _payload;
+}

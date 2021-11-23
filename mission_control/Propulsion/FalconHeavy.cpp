@@ -4,7 +4,7 @@ using namespace std;
 #include "FalconHeavy.h"
 
 Propulsion* FalconHeavy::clone() {
-	return new FalconHeavy();
+	return Booster::clone();
 }
 
 void FalconHeavy::operation()

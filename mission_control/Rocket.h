@@ -39,6 +39,8 @@ class Rocket
 	public: State* getState();
 
 	public: void setState(State* aState);
+
+	public: virtual ~Rocket();
 };
 
 #endif

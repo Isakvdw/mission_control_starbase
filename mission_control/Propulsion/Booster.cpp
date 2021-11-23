@@ -72,3 +72,12 @@ Propulsion* Booster::clone() {
 	}
 	return clone; 
 }
+
+#include <iostream>
+
+Booster::~Booster() {
+	for (auto it = _children.begin(); it < _children.end(); it++) {
+		delete *it;
+	}
+	cout << "deleteufajfsjan\n\n\n\n";
+}

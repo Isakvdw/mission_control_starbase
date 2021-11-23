@@ -9,7 +9,15 @@ void SecondStage::operation()
 }
 
 Propulsion* SecondStage::clone() {
-	return new SecondStage();
+	return Booster::clone();
+}
+
+#include <iostream>
+SecondStage::~SecondStage() {
+	for (auto it = _children.begin(); it < _children.end(); it++) {
+		delete *it;
+	}
+	cout << "SeconStage\n";
 }
 
 string SecondStage::getName()
