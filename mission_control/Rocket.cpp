@@ -25,3 +25,9 @@ void Rocket::setState(State* aState) {
 	this->_state = aState;
 }
 
+Rocket::Rocket(){
+	_propulsion=NULL;
+	_payload=NULL;
+	_state=NULL;
+}
+
