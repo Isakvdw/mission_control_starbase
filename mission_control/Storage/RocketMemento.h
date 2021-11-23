@@ -11,27 +11,32 @@ using namespace std;
 
 // class Caretaker;
 // class Aggregate;
+#include "../Rocket.h"
+
+class State;
 
 class RocketMemento
 {
 private:
   friend class Rocket;
 
-  /// state of the rocket to be stored by the memento
-  string _rocket_state;
+  Propulsion* _propulsion_store;
+  Payload* _payload_store;
+  State* _state_store;
 
   /**
-	 * @brief A parameterized constructor
-	 * @param s a string containing the rocket state
+	 * @brief Constructor for RocketMemento
+	 * @param[in] _prop The propulsion of the rocket
+	 * @param[in] _payload The payload of the rocket
+	 * @param[in] _state The state of the rocket
 	 */
-  RocketMemento(string s);
+  RocketMemento(Propulsion* _prop, Payload* _payload, State* _state);
 
-public:
-  /**
-	 * @brief Getter for the rocket state
-	 * @return the rocket state as a string
-	 */
-  string getRocketState();
+ public:
+  ~RocketMemento();
+  Propulsion* getPropulsion();
+  Payload* getPayload();
+  State* getState();
   // Caretaker *caretaker;
   // Aggregate *rocketAggregate;
 };

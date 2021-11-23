@@ -10,9 +10,15 @@ RocketMemento *RocketIterator::next()
 	return (*_curr)[current];
 }
 
-bool RocketIterator::end()
+bool RocketIterator::isEnd()
 {
 	return current == _curr->size();
+}
+
+RocketMemento *RocketIterator::End()
+{
+	current = _curr->size();
+	return (*_curr)[current];
 }
 
 RocketMemento *RocketIterator::start()

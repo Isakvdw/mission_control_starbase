@@ -15,6 +15,7 @@ void RocketAggregate::remove(RocketMemento *aR)
 	{
 		if (_mementos[i] == aR)
 		{
+			delete (_mementos[i]);
 			_mementos[i] = _mementos[_mementos.size() - 1];
 			_mementos.pop_back();
 		}
@@ -24,4 +25,10 @@ void RocketAggregate::remove(RocketMemento *aR)
 Iterator *RocketAggregate::createIterator()
 {
 	return new RocketIterator(&_mementos);
+}
+
+RocketAggregate::~RocketAggregate() {
+	for (int i = 0; i < _mementos.size(); i++) {
+		delete _mementos[i];
+	}
 }

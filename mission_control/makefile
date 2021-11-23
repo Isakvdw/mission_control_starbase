@@ -11,7 +11,7 @@ r:
 runonce: run clean
 
 clean:
-	-@rm out/*.o main.out 2>/dev/null
+	-@rm out/*.o *.o main.out 2>/dev/null
 leakcheck:
 	valgrind --leak-check=yes ./main.out
 gdb:
