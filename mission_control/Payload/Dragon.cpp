@@ -33,6 +33,10 @@ string Dragon::getPayloadDescription() {
 	return _payloadDescription;
 }
 
+void Dragon::setPayloadDescription(string aDescription) {
+	_payloadDescription = aDescription;
+}
+
 /**
  * @brief Displays the description of the Dragon payload to the user.
  * @details Every Dragon payload has a preset payload description.
