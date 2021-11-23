@@ -101,10 +101,6 @@ class Booster : public Propulsion {
    public:
     virtual string getName();
 
-    /// @todo find out what this is
-   public:
-    virtual void operation();
-
    public:
     /**
 	 * @brief Returns a clone of the entire tree structure

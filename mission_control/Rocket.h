@@ -6,6 +6,7 @@
 #include "Payload/Payload.h"
 #include "Storage/StorageG.h"
 // #include "State/State.h"
+#include "Propulsion/Booster.h"
 
 class State;
 class RocketMemento;
@@ -31,7 +32,7 @@ class Rocket
 
 	private: RocketType _rocketType;
 	
-	Rocket();
+	public: Rocket();
 
 	public:
 	/**
@@ -39,7 +40,7 @@ class Rocket
 	 * @details Returns a pointer to the second stage of the rocket
 	 * @return SecondStage* 
 	 */
-	SecondStage* getSecondStage();
+	Booster* getSecondStage();
 
 	public:
 	/**
@@ -50,6 +51,7 @@ class Rocket
 	 */
 	Booster* getFirstStage(int index);
 
+	/// 
 	public: RocketType getRocketType();
 
 	/**

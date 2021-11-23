@@ -4,10 +4,6 @@ using namespace std;
 
 #include "Engine.h"
 
-void Engine::operation() {
-	throw "Not yet implemented";
-}
-
 Engine::Engine() {
 	_engineType = "";
 }

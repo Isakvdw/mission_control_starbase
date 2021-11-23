@@ -3,11 +3,6 @@ using namespace std;
 
 #include "SecondStage.h"
 
-void SecondStage::operation()
-{
-	throw "Not yet implemented";
-}
-
 Propulsion* SecondStage::clone() {
 	SecondStage* clone =  new SecondStage(); // hmmm
 	clone->_lOXfuelLevel = this->_lOXfuelLevel;

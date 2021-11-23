@@ -12,10 +12,6 @@ void Propulsion::remove(Propulsion* aP) {
 	throw "Not yet implemented";
 }
 
-void Propulsion::operation() {
-	throw "Not yet implemented";
-}
-
 void Propulsion::attach(Observer* aO) {
 	_observerList.push_back(aO);
 }

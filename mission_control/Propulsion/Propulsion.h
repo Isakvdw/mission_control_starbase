@@ -26,9 +26,6 @@ class Propulsion
 	 */
 	public: virtual void remove(Propulsion* aP) = 0;
 
-	
-	public: virtual void operation() = 0;
-
 	/**
 	 * Adds an observer to the observer list
 	 * @param[in] aO A pointer to the observer to be added to the observer list 

@@ -41,11 +41,6 @@ void Booster::setRP1fuelLevel(int aRP1fuelLevel)
 	this->_rP1fuelLevel = aRP1fuelLevel;
 }
 
-void Booster::operation()
-{
-	throw "Not yet implemented";
-}
-
 int Booster::getBoosterId()
 {
 	return this->booster_id;

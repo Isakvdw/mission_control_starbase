@@ -13,9 +13,6 @@ public:
 	Propulsion* clone();
 
 public:
-	void operation();
-
-public:
 	string getName() override;
 
 public:

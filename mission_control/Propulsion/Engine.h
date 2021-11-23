@@ -10,9 +10,7 @@ using namespace std;
 class Engine: public Propulsion
 {
 	private: string _engineType;
-
-	public: void operation();
-
+	
 	/**
 	 * @brief Creates a clone of the engine
 	 * @return Pointer to the clone of this engine
