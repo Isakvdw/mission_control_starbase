@@ -12,3 +12,7 @@ string Falcon::getName()
 {
 	return "Falcon - " + to_string(this->getBoosterId());
 }
+
+Propulsion* Falcon::clone() {
+	return new Falcon();
+}

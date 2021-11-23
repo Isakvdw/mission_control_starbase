@@ -32,3 +32,5 @@ void Propulsion::notify() {
 	}
 }
 
+Propulsion::~Propulsion()=default;
+

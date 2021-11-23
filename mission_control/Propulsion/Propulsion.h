@@ -77,6 +77,9 @@ class Propulsion
 	 * @return Propultion pointer
 	*/
 	public: virtual Propulsion* clone()=0;
+
+	/// default virtual destructor
+	public: virtual ~Propulsion();
 };
 
 #endif

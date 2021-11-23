@@ -10,6 +10,9 @@ class FalconHeavy : public Booster
 {
 
 public:
+	Propulsion* clone();
+
+public:
 	void operation();
 
 public:
