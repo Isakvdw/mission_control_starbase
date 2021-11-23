@@ -14,6 +14,7 @@ using namespace std;
 #include "../Payload/DragonCrew.h"
 #include "../Payload/Dragon.h"
 #include "../Payload/Starlink.h"
+#include "../State/BuildS.h"
 
 /**
  * @brief Implements @p Builder, constructs Rockets according to a structure

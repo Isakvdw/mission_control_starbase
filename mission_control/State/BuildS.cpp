@@ -1,4 +1,5 @@
 #include <exception>
+#include <iostream>
 using namespace std;
 
 #include "BuildS.h"
@@ -12,4 +13,12 @@ using namespace std;
  */
 void BuildS::changeState(Rocket* aR) {
 	aR->setState(new FuelS());
+}
+
+void BuildS::handle(Rocket *aR) {
+	cout << "Rocket Under Construction" << endl;
+}
+
+State *BuildS::clone() {
+	return new BuildS();
 }

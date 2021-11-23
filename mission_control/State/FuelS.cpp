@@ -13,3 +13,22 @@ using namespace std;
 void FuelS::changeState(Rocket* aR) {
 	aR->setState(new LaunchS());
 }
+
+void FuelS::handle(Rocket* aR) {
+	cout << "Refueling commenced" << endl;
+	aR->getSecondStage()->setLOXfuelLevel(100);
+	aR->getSecondStage()->setRP1fuelLevel(100);
+	aR->getSecondStage()->notify();
+
+	int bound =  (aR->getRocketType() == Rocket::FALCON9) ? 1 : 3;
+	for (int i = 0; i < bound; i++) {
+		aR->getFirstStage(i)->setLOXfuelLevel(100);
+		aR->getFirstStage(i)->setRP1fuelLevel(100);
+		aR->getFirstStage(i)->notify();
+	}
+	cout << "Refueling concluded" << endl;
+}
+
+State* FuelS::clone() {
+	return new FuelS();
+}

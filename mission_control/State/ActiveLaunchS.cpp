@@ -15,3 +15,14 @@ void ActiveLaunchS::changeState(Rocket* aR) {
     /// refuel
     aR->setState(new LaunchS());
 }
+
+void ActiveLaunchS::handle(Rocket *aR) {
+    aR->setState(new FuelS());
+    aR->getState()->handle(aR);
+    aR->setState(new LaunchS());
+    aR->getState()->handle(aR);
+}
+
+State* ActiveLaunchS::clone() {
+    return new ActiveLaunchS();
+}

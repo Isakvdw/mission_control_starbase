@@ -16,6 +16,8 @@ ConcreteBuilder::ConcreteBuilder(Rocket::RocketType aRocketType, Payload::Payloa
 void ConcreteBuilder::setSecondStage() {
 	if (!_constructionRocket) {
 		_constructionRocket = new Rocket(); // init rocket on new build
+		_constructionRocket->setState(new BuildS());
+		_constructionRocket->getState()->handle(_constructionRocket);
 	}
 	if (!_currSecondStage) {
 		_currSecondStage = new SecondStage();

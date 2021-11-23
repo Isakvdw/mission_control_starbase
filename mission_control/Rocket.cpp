@@ -53,3 +53,11 @@ void Rocket::Restore(RocketMemento* aRockMem) {
 	_payload = aRockMem->getPayload();
 	_state = aRockMem->getState();
 }
+
+Rocket::RocketType Rocket::getRocketType() {
+	return _rocketType;
+}
+
+void Rocket::setRocketType(RocketType type) {
+	_rocketType = type;
+}
