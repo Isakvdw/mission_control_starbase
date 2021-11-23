@@ -6,14 +6,14 @@ using namespace std;
 
 class SatelliteLauncher
 {
-	private: 
+	protected: 
 		SatelliteLauncher* _successor;
 	public: 
 		// Starlink* _unnamed_Starlink_;
 		// SatelliteLauncher* _unnamed_SatelliteLauncher_;
 		SatelliteLauncher();
 		~SatelliteLauncher();
-		void handleRequest();
+		virtual void handleRequest(int number = 0)=0;
 		void add(SatelliteLauncher* satellite); 
 		int count();
 };

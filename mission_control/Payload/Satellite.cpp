@@ -36,3 +36,18 @@ void Satellite::satBoot(int v) {
 	cout << "Satellite: " << v << " Online" << endl;
 }
 
+
+void Satellite::handleRequest(int number) {
+	satBoot(number);
+	if (this->_successor == NULL)
+	{
+		return;
+	}
+	else
+	{
+		this->_successor->handleRequest(++number);
+		delete this->_successor;
+		this->_successor = NULL;
+		return;
+	}
+}

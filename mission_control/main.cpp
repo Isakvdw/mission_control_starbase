@@ -35,7 +35,7 @@ int main()
 void simulation() {
     ConcreteBuilder builder(Rocket::FALCONHEAVY, Payload::STARLINK);
     builder.setFirstStageBoosters();
-    builder.setPayload(50);
+    builder.setPayload(7);
     Rocket* r = builder.buildRocket();
     
     FuelObserver* observer = new FuelObserver();

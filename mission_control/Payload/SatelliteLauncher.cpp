@@ -26,29 +26,6 @@ SatelliteLauncher::~SatelliteLauncher() {
 }
 
 /**
- * @brief SatelliteLauncher goes down the chain of Satellites.
- * Once it reaches the end they detach and delete. 
- * @details Once handleRequest() is called.
- * 			Starting from the head the list of Satellites is
- * 			traversed until the very end.
- * 			At the end through recursion the ends get deleted 
- */
-void SatelliteLauncher::handleRequest() {
-	if (this->_successor == NULL)
-	{
-		return;
-	}
-	else
-	{
-		
-		this->_successor->handleRequest();
-		delete this->_successor;
-		this->_successor = NULL;
-		return;
-	}
-}
-
-/**
  * @brief Adds a satellite to the chain.
  * @details Adds a satellite to the current list of
  * 			satellites with use of recursion to find
