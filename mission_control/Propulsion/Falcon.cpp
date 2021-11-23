@@ -16,11 +16,3 @@ string Falcon::getName()
 Propulsion* Falcon::clone() {
 	return Booster::clone();
 }
-
-#include <iostream>
-Falcon::~Falcon() {
-	for (auto it = _children.begin(); it < _children.end(); it++) {
-		delete *it;
-	}
-	cout << "Falcon\n";
-}

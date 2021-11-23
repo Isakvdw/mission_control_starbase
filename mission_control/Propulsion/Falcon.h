@@ -17,9 +17,6 @@ public:
 
 public:
 	string getName() override;
-
-public:
-	~Falcon() override;
 };
 
 #endif
